@@ -1,49 +1,64 @@
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background shadow-lg border-b border-border/20">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary-foreground">
-              Security Saúde
-            </div>
+            <img 
+              src="/logo-security-saude.png" 
+              alt="Security Saúde" 
+              className="h-10 w-auto"
+            />
           </div>
 
-          {/* Center Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            <div className="flex items-center space-x-2 text-primary-foreground text-sm">
-              <span>Você está em:</span>
-              <Select defaultValue="rn">
-                <SelectTrigger className="w-48 bg-transparent border-primary-foreground/20 text-primary-foreground">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="rn">Rio Grande do Norte</SelectItem>
-                  <SelectItem value="pb">Paraíba</SelectItem>
-                  <SelectItem value="pe">Pernambuco</SelectItem>
-                  <SelectItem value="ce">Ceará</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
+          {/* Center Navigation Menu */}
+          <nav className="hidden lg:flex items-center justify-center flex-1 space-x-8">
+            <Link 
+              to="/" 
+              className="text-foreground hover:text-brand-blue transition-colors font-medium"
+            >
+              Início
+            </Link>
+            <Link 
+              to="/sobre-nos" 
+              className="text-foreground hover:text-brand-blue transition-colors font-medium"
+            >
+              Sobre nós
+            </Link>
+            <Link 
+              to="/corretor" 
+              className="text-foreground hover:text-brand-blue transition-colors font-medium"
+            >
+              Corretor
+            </Link>
+            <Link 
+              to="/contato" 
+              className="text-foreground hover:text-brand-blue transition-colors font-medium"
+            >
+              Contato
+            </Link>
+          </nav>
 
           {/* Right Side - Phone and CTA */}
           <div className="flex items-center space-x-4">
+            {/* Phone */}
             <a 
               href="tel:8440001234" 
-              className="hidden sm:flex items-center space-x-2 text-primary-foreground hover:text-accent transition-colors"
+              className="hidden sm:flex items-center space-x-2 text-primary hover:text-brand-blue transition-colors"
             >
               <Phone className="h-4 w-4" />
               <span>(84) 4000-1234</span>
             </a>
             
+            {/* CTA Button */}
             <Button 
-              className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground rounded-lg"
+              className="bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-brand-blue/20"
             >
               Solicitar Cotação
             </Button>

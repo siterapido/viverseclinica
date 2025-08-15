@@ -2,58 +2,58 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="pt-20 min-h-screen bg-gradient-to-br from-background to-secondary">
-      <div className="container mx-auto px-4 py-16">
+    <section className="pt-20 min-h-screen bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%2305AAE5%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M50%2030c11.046%200%2020%208.954%2020%2020s-8.954%2020-20%2020-20-8.954-20-20%208.954-20%2020-20zm0%205c-8.284%200-15%206.716-15%2015s6.716%2015%2015%2015%2015-6.716%2015-15-6.716-15-15-15z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]"></div>
+      <div className="container mx-auto px-4 py-16 relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Security Saúde: Para quem sempre quer o{" "}
-                <span className="text-brand-blue">melhor plano!</span>
+                Planos de Saúde{" "}
+                <span className="text-brand-blue">
+                  Pessoa Física
+                </span>{" "}
+                e{" "}
+                <span className="text-primary">
+                  PME
+                </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                Atendimento de Excelência para você, sua família e sua empresa.
+                Soluções completas em saúde para você, sua família e sua empresa. 
+                Cobertura nacional com a qualidade Security Saúde.
               </p>
             </div>
             
-            <Button 
-              size="lg"
-              className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground rounded-lg px-8 py-4 text-lg"
-            >
-              Solicitar Cotação
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-brand-blue/20"
+              >
+                Cotação Pessoa Física
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:text-primary-foreground font-semibold px-8 py-4 text-lg rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+              >
+                Cotação PME
+              </Button>
+            </div>
           </div>
 
-          {/* Right Content - Image */}
+          {/* Right Content - Image Area */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-brand-blue/10 to-primary/10 rounded-2xl p-8 aspect-square flex items-center justify-center">
+            <div className="aspect-square bg-secondary/20 rounded-2xl flex items-center justify-center border-2 border-dashed border-border/40">
               <div className="text-center space-y-4">
-                <div className="w-32 h-32 bg-brand-blue/20 rounded-full mx-auto flex items-center justify-center">
-                  <div className="w-20 h-20 bg-brand-blue rounded-full flex items-center justify-center">
-                    <svg className="w-10 h-10 text-brand-blue-foreground" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                  </div>
-                </div>
-                <p className="text-lg font-semibold text-foreground">
-                  Atendimento Humanizado
-                </p>
-                <p className="text-muted-foreground">
-                  Cuidado próximo e personalizado
-                </p>
-              </div>
-            </div>
-            
-            {/* Trust Seal */}
-            <div className="absolute bottom-4 right-4 bg-background rounded-lg shadow-lg p-3">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-brand-blue-foreground" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                <div className="w-20 h-20 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center">
+                  <svg className="w-10 h-10 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium text-foreground">Confiança</span>
+                <p className="text-muted-foreground text-sm">
+                  Espaço reservado para imagem
+                </p>
               </div>
             </div>
           </div>

@@ -1,7 +1,41 @@
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Star, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Star, Facebook, Instagram, Linkedin, Youtube, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Footer = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      text: "Atendimento excepcional e uma rede de hospitais de primeira qualidade. A Security Saúde realmente se preocupa com o bem-estar dos seus beneficiários.",
+      author: "Maria Regina",
+      role: "Empresária - Natal/RN",
+      initials: "MR",
+      rating: 5
+    },
+    {
+      text: "Excelente plano PME! A gestão é muito simples e o atendimento aos nossos colaboradores é sempre rápido e eficiente.",
+      author: "Carlos Silva",
+      role: "Diretor de RH - João Pessoa/PB",
+      initials: "CS",
+      rating: 5
+    },
+    {
+      text: "Minha família está protegida há mais de 5 anos. Telemedicina funciona perfeitamente e a rede credenciada é excelente.",
+      author: "Ana Paula",
+      role: "Arquiteta - Recife/PE",
+      initials: "AP",
+      rating: 5
+    },
+    {
+      text: "Como MEI, encontrei na Security Saúde o plano ideal. Benefícios fiscais e cobertura completa a um preço justo.",
+      author: "Roberto Lima",
+      role: "Microempreendedor - Mossoró/RN",
+      initials: "RL",
+      rating: 5
+    }
+  ];
+
   const quickLinks = [
     "Planos de Saúde",
     "Sobre a Security",
@@ -18,14 +52,36 @@ const Footer = () => {
     { icon: Youtube, href: "#", label: "YouTube" }
   ];
 
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-primary text-primary-foreground relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50"></div>
+      <div className="container mx-auto px-4 py-16 relative">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="text-2xl font-bold">Security Saúde</div>
+              <img 
+                src="/logo-security-saude.png" 
+                alt="Security Saúde" 
+                className="h-12 w-auto brightness-0 invert"
+              />
               <p className="text-primary-foreground/80 leading-relaxed">
                 Há mais de 20 anos cuidando com excelência da saúde de nossos beneficiários. 
                 Qualidade, confiança e atendimento humanizado.
@@ -56,34 +112,69 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Customer Testimonial */}
+          {/* Customer Testimonials - Rotating */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold">O que nossos clientes dizem</h3>
+            <h3 className="text-xl font-semibold text-primary-foreground">O que nossos clientes dizem</h3>
             
-            <Card className="bg-primary-foreground/10 border-primary-foreground/20 p-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <blockquote className="text-primary-foreground/90 italic">
-                  "Atendimento excepcional e uma rede de hospitais de primeira qualidade. 
-                  A Security Saúde realmente se preocupa com o bem-estar dos seus beneficiários."
-                </blockquote>
-                
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-brand-blue/20 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-medium text-brand-blue">MR</span>
+            <div className="relative">
+              <Card className="bg-background border-border/20 p-6 shadow-xl">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-1">
+                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
                   </div>
-                  <div>
-                    <div className="font-medium text-sm">Maria Regina</div>
-                    <div className="text-xs text-primary-foreground/70">Empresária - Natal/RN</div>
+                  
+                  <blockquote className="text-foreground italic text-sm leading-relaxed min-h-[4rem]">
+                    "{testimonials[currentTestimonial].text}"
+                  </blockquote>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-brand-blue/10 rounded-full flex items-center justify-center">
+                        <span className="text-sm font-medium text-brand-blue">{testimonials[currentTestimonial].initials}</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-sm text-foreground">{testimonials[currentTestimonial].author}</div>
+                        <div className="text-xs text-muted-foreground">{testimonials[currentTestimonial].role}</div>
+                      </div>
+                    </div>
+                    
+                    {/* Navigation buttons */}
+                    <div className="flex items-center space-x-2">
+                      <button
+                        onClick={prevTestimonial}
+                        className="w-8 h-8 bg-brand-blue/10 hover:bg-brand-blue/20 rounded-full flex items-center justify-center transition-colors"
+                        aria-label="Depoimento anterior"
+                      >
+                        <ChevronLeft className="w-4 h-4 text-brand-blue" />
+                      </button>
+                      <button
+                        onClick={nextTestimonial}
+                        className="w-8 h-8 bg-brand-blue/10 hover:bg-brand-blue/20 rounded-full flex items-center justify-center transition-colors"
+                        aria-label="Próximo depoimento"
+                      >
+                        <ChevronRight className="w-4 h-4 text-brand-blue" />
+                      </button>
+                    </div>
+                  </div>
+                  
+                  {/* Dots indicator */}
+                  <div className="flex justify-center space-x-2 pt-2">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentTestimonial(index)}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          index === currentTestimonial ? 'bg-brand-blue' : 'bg-border'
+                        }`}
+                        aria-label={`Ir para depoimento ${index + 1}`}
+                      />
+                    ))}
                   </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           </div>
 
           {/* Quick Links */}

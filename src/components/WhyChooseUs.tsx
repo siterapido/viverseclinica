@@ -1,108 +1,147 @@
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Network, Heart, Settings, Video, MapPin, Pill } from "lucide-react";
+import { Network, Heart, Settings, Video, MapPin, Pill, Shield, Clock, Award, Users } from "lucide-react";
 
 const WhyChooseUs = () => {
   const benefits = [
     {
-      icon: Network,
-      title: "Rede própria",
-      description: "Mais de 500 prestadores"
+      icon: Shield,
+      title: "Planos PME Flexíveis",
+      description: "Soluções customizadas para empresas de 2 a 99 colaboradores, com benefícios fiscais e gestão simplificada.",
+      highlight: "A partir de 2 vidas"
     },
     {
       icon: Heart,
-      title: "Atendimento humanizado",
-      description: "Cuidado próximo e personalizado"
-    },
-    {
-      icon: Settings,
-      title: "Planos sob medida",
-      description: "Opções para todas as necessidades"
+      title: "Pessoa Física Completa",
+      description: "Planos individuais e familiares com cobertura nacional, telemedicina incluída e rede premium.",
+      highlight: "Cobertura nacional"
     },
     {
       icon: Video,
-      title: "Telemedicina",
-      description: "Consultas online sempre que precisar"
+      title: "Telemedicina 24h",
+      description: "Consultas médicas online disponíveis 24 horas, 7 dias por semana, com especialistas qualificados.",
+      highlight: "Sempre disponível"
+    },
+    {
+      icon: Network,
+      title: "Rede Credenciada Premium",
+      description: "Mais de 500 prestadores credenciados, incluindo hospitais de referência e laboratórios especializados.",
+      highlight: "500+ prestadores"
     },
     {
       icon: MapPin,
-      title: "Ampla rede de atendimento",
-      description: "Hospitais e clínicas em todo o estado"
+      title: "Cobertura Regional",
+      description: "Atendimento em mais de 100 cidades do Nordeste, sempre próximo de você e sua empresa.",
+      highlight: "100+ cidades"
     },
     {
-      icon: Pill,
-      title: "Descontos exclusivos",
-      description: "Até 50% em medicamentos"
+      icon: Award,
+      title: "20 Anos de Excelência",
+      description: "Mais de duas décadas cuidando da saúde com qualidade, confiança e atendimento humanizado.",
+      highlight: "Tradição e qualidade"
     }
   ];
 
-  return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content - Benefits List */}
-          <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-              Por que escolher a{" "}
-              <span className="text-brand-blue">Security Saúde?</span>
-            </h2>
-            
-            <div className="grid gap-6">
-              {benefits.map((benefit, index) => (
-                <Card key={index} className="p-4 border-border/50 hover:shadow-lg transition-all hover:border-brand-blue/30">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <benefit.icon className="h-6 w-6 text-brand-blue" />
-                    </div>
-                    <div className="space-y-1">
-                      <h3 className="font-semibold text-foreground">
-                        {benefit.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
+  const stats = [
+    { icon: Users, value: "500k+", label: "Vidas atendidas", color: "brand-blue" },
+    { icon: Clock, value: "24h", label: "Atendimento", color: "primary" },
+    { icon: Award, value: "99%", label: "Satisfação", color: "brand-blue" },
+    { icon: Pill, value: "50%", label: "Desconto farmácias", color: "primary" }
+  ];
 
-          {/* Right Content - Statistics */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-brand-blue/5 to-primary/5 rounded-2xl p-8">
-              <div className="grid grid-cols-2 gap-8">
-                <div className="text-center space-y-2">
-                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
-                    <Heart className="h-8 w-8 text-brand-blue" />
+  return (
+    <section className="py-20 bg-secondary/20">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
+            Por que escolher a{" "}
+            <span className="text-brand-blue">Security Saúde?</span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Mais de 20 anos oferecendo as melhores soluções em saúde para pessoas físicas e empresas
+          </p>
+        </div>
+
+        {/* Benefits Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {benefits.map((benefit, index) => (
+            <Card key={index} className="group p-6 border-border/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-background hover:border-brand-blue/30">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-14 h-14 bg-brand-blue/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-blue/20 transition-colors">
+                    <benefit.icon className="h-7 w-7 text-brand-blue" />
                   </div>
-                  <div className="text-2xl font-bold text-brand-blue">99%</div>
-                  <p className="text-sm text-muted-foreground">Satisfação dos clientes</p>
+                  <span className="text-xs font-medium text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full">
+                    {benefit.highlight}
+                  </span>
                 </div>
                 
-                <div className="text-center space-y-2">
-                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
-                    <Network className="h-8 w-8 text-brand-blue" />
-                  </div>
-                  <div className="text-2xl font-bold text-brand-blue">24h</div>
-                  <p className="text-sm text-muted-foreground">Atendimento disponível</p>
-                </div>
-                
-                <div className="text-center space-y-2">
-                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
-                    <MapPin className="h-8 w-8 text-brand-blue" />
-                  </div>
-                  <div className="text-2xl font-bold text-brand-blue">100+</div>
-                  <p className="text-sm text-muted-foreground">Cidades atendidas</p>
-                </div>
-                
-                <div className="text-center space-y-2">
-                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
-                    <Pill className="h-8 w-8 text-brand-blue" />
-                  </div>
-                  <div className="text-2xl font-bold text-brand-blue">50%</div>
-                  <p className="text-sm text-muted-foreground">Desconto em medicamentos</p>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-brand-blue transition-colors">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
                 </div>
               </div>
+            </Card>
+          ))}
+        </div>
+
+        {/* Statistics Section */}
+        <div className="bg-background rounded-3xl p-8 shadow-xl border border-border/20">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-foreground mb-2">
+              Números que comprovam nossa{" "}
+              <span className="text-brand-blue">excelência</span>
+            </h3>
+            <p className="text-muted-foreground">
+              Confiança construída ao longo de mais de duas décadas
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-16 h-16 bg-${stat.color}/10 rounded-2xl mx-auto flex items-center justify-center mb-4 group-hover:bg-${stat.color}/20 transition-colors`}>
+                  <stat.icon className={`h-8 w-8 text-${stat.color}`} />
+                </div>
+                <div className={`text-3xl font-bold text-${stat.color} mb-1`}>
+                  {stat.value}
+                </div>
+                <p className="text-sm text-muted-foreground font-medium">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-primary/5 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold text-foreground mb-4">
+              Pronto para ter a melhor proteção em saúde?
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Fale com nossos especialistas e descubra o plano ideal para você ou sua empresa
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg"
+                className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground px-8 transition-all"
+              >
+                Solicitar Cotação PME
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 transition-all"
+              >
+                Cotação Pessoa Física
+              </Button>
             </div>
           </div>
         </div>

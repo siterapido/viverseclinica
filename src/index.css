@@ -17,11 +17,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Security Saúde Brand Colors */
-    --primary: 207 100% 44%;  /* #192A48 equivalent in HSL */
+    /* Security Saúde Brand Colors - Corrected Values */
+    --primary: 224 43% 20%;  /* #192A48 */
     --primary-foreground: 0 0% 100%;
 
-    --brand-blue: 196 96% 47%;  /* #05AAE5 */
+    --brand-blue: 197 95% 46%;  /* #05AAE5 */
     --brand-blue-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -30,7 +30,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 196 96% 47%;  /* Using brand blue as accent */
+    --accent: 197 95% 46%;  /* Using brand blue as accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 196 96% 47%;
+    --ring: 197 95% 46%;
 
     --radius: 0.5rem;
 
@@ -60,19 +60,19 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 207 100% 44%;  /* Dark mode uses primary color */
+    --background: 224 43% 20%;  /* Dark mode uses primary color */
     --foreground: 210 40% 98%;
 
-    --card: 207 100% 44%;
+    --card: 224 43% 20%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 207 100% 44%;
+    --popover: 224 43% 20%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 207 100% 44%;
+    --primary-foreground: 224 43% 20%;
 
-    --brand-blue: 196 96% 47%;
+    --brand-blue: 197 95% 46%;
     --brand-blue-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;

@@ -37,17 +37,18 @@ const QuoteForm = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-secondary/30 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23192A48%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M0%200h30v30H0V0zm30%2030h30v30H30V30z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]"></div>
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-2xl mx-auto">
-          <Card className="border-border/50 shadow-xl">
-            <CardHeader className="text-center space-y-4">
+          <Card className="border-border/50 shadow-xl bg-background">
+            <CardHeader className="text-center space-y-4 bg-secondary/50 rounded-t-lg">
               <CardTitle className="text-2xl md:text-3xl font-bold text-foreground">
-                Preencha o formulário e garanta as{" "}
-                <span className="text-brand-blue">melhores condições</span>
+                Cotação para planos{" "}
+                <span className="text-brand-blue">PME e Pessoa Física</span>
               </CardTitle>
               <p className="text-muted-foreground">
-                Nossa equipe entrará em contato em até 2 horas úteis
+                Receba uma proposta personalizada em até 2 horas úteis
               </p>
             </CardHeader>
 
@@ -55,27 +56,27 @@ const QuoteForm = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Company Type Selection */}
                 <div className="space-y-3">
-                  <Label className="text-base font-medium">Tipo de contratação:</Label>
+                  <Label className="text-base font-medium">Tipo de plano desejado:</Label>
                   <RadioGroup
                     value={formData.hasCompany}
                     onValueChange={(value) => setFormData(prev => ({ ...prev, hasCompany: value }))}
                     className="grid grid-cols-2 gap-4"
                   >
-                    <div className="flex items-center space-x-2 border rounded-lg p-4 cursor-pointer hover:bg-secondary/50">
+                    <div className="flex items-center space-x-2 border-2 rounded-lg p-4 cursor-pointer hover:bg-primary/5 hover:border-primary transition-all">
                       <RadioGroupItem value="yes" id="company-yes" />
                       <Label htmlFor="company-yes" className="cursor-pointer">
                         <div className="space-y-1">
-                          <div className="font-medium">Tenho CNPJ</div>
-                          <div className="text-sm text-muted-foreground">Ideal para empresas</div>
+                          <div className="font-medium">Plano PME</div>
+                          <div className="text-sm text-muted-foreground">MEI, ME ou EPP (2-99 vidas)</div>
                         </div>
                       </Label>
                     </div>
-                    <div className="flex items-center space-x-2 border rounded-lg p-4 cursor-pointer hover:bg-secondary/50">
+                    <div className="flex items-center space-x-2 border-2 rounded-lg p-4 cursor-pointer hover:bg-brand-blue/5 hover:border-brand-blue transition-all">
                       <RadioGroupItem value="no" id="company-no" />
                       <Label htmlFor="company-no" className="cursor-pointer">
                         <div className="space-y-1">
-                          <div className="font-medium">Não tenho CNPJ</div>
-                          <div className="text-sm text-muted-foreground">Ideal para pessoas físicas</div>
+                          <div className="font-medium">Pessoa Física</div>
+                          <div className="text-sm text-muted-foreground">Individual ou Familiar</div>
                         </div>
                       </Label>
                     </div>
@@ -166,7 +167,7 @@ const QuoteForm = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground"
+                  className="w-full bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 border border-brand-blue/20"
                 >
                   Solicitar Cotação Gratuita
                 </Button>
