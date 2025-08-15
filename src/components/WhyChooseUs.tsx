@@ -67,67 +67,42 @@ const WhyChooseUs = () => {
             </div>
           </div>
 
-          {/* Right Content - Mobile App Mockup */}
-          <div className="relative flex justify-center">
-            <div className="relative">
-              {/* Phone Frame */}
-              <div className="w-72 h-[600px] bg-primary rounded-[3rem] p-4 shadow-2xl">
-                <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden relative">
-                  {/* Status Bar */}
-                  <div className="h-8 bg-brand-blue flex items-center justify-between px-6 text-brand-blue-foreground text-xs">
-                    <span>9:41</span>
-                    <div className="flex space-x-1">
-                      <div className="w-4 h-2 bg-brand-blue-foreground rounded-sm"></div>
-                      <div className="w-4 h-2 bg-brand-blue-foreground rounded-sm"></div>
-                      <div className="w-4 h-2 bg-brand-blue-foreground rounded-sm"></div>
-                    </div>
+          {/* Right Content - Statistics */}
+          <div className="relative">
+            <div className="bg-gradient-to-br from-brand-blue/5 to-primary/5 rounded-2xl p-8">
+              <div className="grid grid-cols-2 gap-8">
+                <div className="text-center space-y-2">
+                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
+                    <Heart className="h-8 w-8 text-brand-blue" />
                   </div>
-                  
-                  {/* App Content */}
-                  <div className="p-6 space-y-6">
-                    <div className="text-center space-y-2">
-                      <h3 className="text-xl font-bold text-foreground">Security Saúde</h3>
-                      <p className="text-sm text-muted-foreground">Seu plano na palma da mão</p>
-                    </div>
-                    
-                    {/* Quick Actions */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-brand-blue/10 rounded-xl p-4 text-center">
-                        <div className="w-8 h-8 bg-brand-blue rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <Video className="w-4 h-4 text-brand-blue-foreground" />
-                        </div>
-                        <span className="text-xs text-foreground">Telemedicina</span>
-                      </div>
-                      <div className="bg-brand-blue/10 rounded-xl p-4 text-center">
-                        <div className="w-8 h-8 bg-brand-blue rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <MapPin className="w-4 h-4 text-brand-blue-foreground" />
-                        </div>
-                        <span className="text-xs text-foreground">Rede Credenciada</span>
-                      </div>
-                    </div>
-                    
-                    {/* Features List */}
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3 p-3 bg-secondary/50 rounded-lg">
-                        <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center">
-                          <Heart className="w-3 h-3 text-brand-blue-foreground" />
-                        </div>
-                        <span className="text-sm text-foreground">Consultas Agendadas</span>
-                      </div>
-                      <div className="flex items-center space-x-3 p-3 bg-secondary/50 rounded-lg">
-                        <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center">
-                          <Pill className="w-3 h-3 text-brand-blue-foreground" />
-                        </div>
-                        <span className="text-sm text-foreground">Descontos Farmácia</span>
-                      </div>
-                    </div>
+                  <div className="text-2xl font-bold text-brand-blue">99%</div>
+                  <p className="text-sm text-muted-foreground">Satisfação dos clientes</p>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
+                    <Network className="h-8 w-8 text-brand-blue" />
                   </div>
+                  <div className="text-2xl font-bold text-brand-blue">24h</div>
+                  <p className="text-sm text-muted-foreground">Atendimento disponível</p>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
+                    <MapPin className="h-8 w-8 text-brand-blue" />
+                  </div>
+                  <div className="text-2xl font-bold text-brand-blue">100+</div>
+                  <p className="text-sm text-muted-foreground">Cidades atendidas</p>
+                </div>
+                
+                <div className="text-center space-y-2">
+                  <div className="w-16 h-16 bg-brand-blue/10 rounded-full mx-auto flex items-center justify-center mb-4">
+                    <Pill className="h-8 w-8 text-brand-blue" />
+                  </div>
+                  <div className="text-2xl font-bold text-brand-blue">50%</div>
+                  <p className="text-sm text-muted-foreground">Desconto em medicamentos</p>
                 </div>
               </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-brand-blue/20 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-accent/40 rounded-full animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
