@@ -1,44 +1,44 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Users, Shield, Stethoscope, Phone, Clock } from "lucide-react";
+import { Heart, Users, Shield, Stethoscope, Phone, Clock, PawPrint, Cross } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: Heart,
-      title: "Plano Pessoa Física Individual",
-      description: "Plano de saúde completo para você com as melhores coberturas do mercado.",
-      features: ["Consultas ilimitadas", "Exames sem carência", "Urgência e emergência 24h", "Telemedicina incluída"]
-    },
-    {
-      icon: Users,
-      title: "Plano Pessoa Física Familiar",
-      description: "Proteção completa para toda sua família em um único plano com descontos especiais.",
-      features: ["Descontos progressivos", "Pediatria especializada", "Cobertura obstétrica", "Rede nacional"]
+      title: "Plano de Saúde Individual",
+      description: "Plano de saúde completo para você com as melhores operadoras parceiras.",
+      features: ["Bradesco Saúde", "SulAmérica", "Unimed", "Hapvida"]
     },
     {
       icon: Shield,
-      title: "Plano PME - MEI",
-      description: "Solução ideal para microempreendedores individuais a partir de 2 vidas.",
-      features: ["Dedução fiscal", "Sem carência para urgência", "Gestão online", "Inclusão de dependentes"]
+      title: "Plano de Saúde Empresarial",
+      description: "Soluções para empresas de todos os portes, desde MEI até 99 colaboradores.",
+      features: ["Dedução fiscal", "Gestão online", "Atendimento dedicado", "Relatórios de utilização"]
+    },
+    {
+      icon: Users,
+      title: "Coletivo por Adesão",
+      description: "Planos coletivos com coberturas especiais e condições diferenciadas.",
+      features: ["Cobertura nacional", "Telemedicina 24h", "Rede credenciada premium", "Sem carência para urgência"]
     },
     {
       icon: Stethoscope,
-      title: "Plano PME - Pequenas Empresas",
-      description: "Planos corporativos de 3 a 29 vidas com condições especiais.",
-      features: ["Tabela diferenciada", "Relatórios de utilização", "Portal exclusivo", "Atendimento dedicado"]
+      title: "Plano Odontológico",
+      description: "Cobertura odontológica completa para pessoa física e jurídica.",
+      features: ["Limpeza e prevenção", "Tratamentos básicos", "Ortodontia", "Implantes"]
     },
     {
-      icon: Phone,
-      title: "Plano PME - Médias Empresas",
-      description: "Soluções customizadas para empresas de 30 a 99 colaboradores.",
-      features: ["Negociação flexível", "Coparticipação opcional", "Rede premium", "Gestão de saúde"]
+      icon: PawPrint,
+      title: "Plano Pet",
+      description: "Cuidado veterinário completo para seu animal de estimação.",
+      features: ["Consultas veterinárias", "Exames laboratoriais", "Cirurgias", "Internação"]
     },
     {
-      icon: Clock,
-      title: "Benefícios Adicionais",
-      description: "Vantagens exclusivas incluídas em todos os nossos planos.",
-      features: ["App Security Saúde", "Descontos em farmácias", "Programa de pontos", "Check-up anual"]
+      icon: Cross,
+      title: "Assistência Funerária",
+      description: "Suporte completo em momentos difíceis com atendimento humanizado.",
+      features: ["Atendimento 24h", "Serviços completos", "Assistência domiciliar", "Suporte familiar"]
     }
   ];
 
@@ -48,10 +48,10 @@ const Services = () => {
       <div className="container mx-auto px-4 relative">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Planos <span className="text-brand-blue">Pessoa Física</span> e <span className="text-primary">PME</span>
+            Nossos <span className="text-brand-blue">Produtos</span> e <span className="text-primary">Serviços</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Soluções completas em saúde para indivíduos, famílias e empresas de todos os portes.
+            Soluções completas em saúde, odontologia, pets e assistência funerária.
           </p>
         </div>
 
@@ -95,24 +95,25 @@ const Services = () => {
         <div className="text-center mt-16 space-y-6">
           <div className="bg-secondary/50 rounded-2xl p-8 max-w-3xl mx-auto border border-border/50">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Não sabe qual plano escolher?
+              Precisa de ajuda para escolher?
             </h3>
             <p className="text-muted-foreground mb-6">
-              Nossa equipe especializada está pronta para ajudar você a encontrar o plano ideal para suas necessidades.
+              Nossa equipe especializada oferece aconselhamento consultivo, sem vendas agressivas. 
+              Construimos relacionamento de confiança e cuidamos de você do começo ao fim.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
                 className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground rounded-lg px-8 py-4 text-lg transition-all"
               >
-                Falar com Consultor PME
+                Falar com Consultor
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg px-8 py-4 text-lg transition-all"
               >
-                Consultor Pessoa Física
+                Solicitar Cotação
               </Button>
             </div>
           </div>

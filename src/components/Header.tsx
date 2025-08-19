@@ -49,11 +49,11 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             {/* Phone */}
             <a 
-              href="tel:8440001234" 
+              href="tel:81999999999" 
               className="hidden sm:flex items-center space-x-2 text-primary hover:text-brand-blue transition-colors"
             >
               <Phone className="h-4 w-4" />
-              <span>(84) 4000-1234</span>
+              <span>(81) 9 9999-9999</span>
             </a>
             
             {/* CTA Button */}

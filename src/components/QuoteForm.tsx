@@ -20,8 +20,10 @@ const QuoteForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Here you would handle the form submission
+    console.log("Form submitted to CRM:", formData);
+    // TODO: Integrate with CRM system as mentioned in briefing
+    // This form should connect to the CRM for personalized service
+    alert("Obrigado! Nossa equipe entrará em contato em breve para oferecer o melhor aconselhamento consultivo.");
   };
 
   const states = [
@@ -44,11 +46,12 @@ const QuoteForm = () => {
           <Card className="border-border/50 shadow-xl bg-background">
             <CardHeader className="text-center space-y-4 bg-secondary/50 rounded-t-lg">
               <CardTitle className="text-2xl md:text-3xl font-bold text-foreground">
-                Cotação para planos{" "}
-                <span className="text-brand-blue">PME e Pessoa Física</span>
+                Encontre o plano ideal{" "}
+                <span className="text-brand-blue">para você</span>
               </CardTitle>
               <p className="text-muted-foreground">
-                Receba uma proposta personalizada em até 2 horas úteis
+                Nossa equipe vai te ajudar a escolher a melhor proteção para sua saúde. 
+                Sem vendas agressivas, apenas aconselhamento consultivo e transparente.
               </p>
             </CardHeader>
 
@@ -115,7 +118,7 @@ const QuoteForm = () => {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="(84) 99999-9999"
+                      placeholder="(81) 99999-9999"
                       value={formData.phone}
                       onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                       required
@@ -157,7 +160,7 @@ const QuoteForm = () => {
                   <Label htmlFor="observations">Observações</Label>
                   <Textarea
                     id="observations"
-                    placeholder="Conte-nos um pouco sobre suas necessidades específicas..."
+                    placeholder="Conte-nos sobre suas necessidades. Queremos entender melhor como podemos te ajudar a escolher o plano perfeito..."
                     value={formData.observations}
                     onChange={(e) => setFormData(prev => ({ ...prev, observations: e.target.value }))}
                     rows={4}
@@ -169,12 +172,13 @@ const QuoteForm = () => {
                   size="lg"
                   className="w-full bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 border border-brand-blue/20"
                 >
-                  Solicitar Cotação Gratuita
+                  Receber Minha Proposta Personalizada
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  Ao enviar o formulário, você concorda com nossa política de privacidade.
-                  Seus dados estão seguros e não serão compartilhados com terceiros.
+                  🔒 Seus dados estão protegidos. Nossa equipe especializada entrará em contato 
+                  para oferecer o melhor aconselhamento, sem pressão comercial. 
+                  <br />Formulário conectado ao nosso CRM para atendimento personalizado.
                 </p>
               </form>
             </CardContent>

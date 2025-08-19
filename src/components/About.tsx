@@ -5,7 +5,7 @@ const About = () => {
   const stats = [
     {
       icon: Award,
-      number: "+ 20",
+      number: "32",
       label: "anos de experiência"
     },
     {
@@ -23,18 +23,18 @@ const About = () => {
   const teamValues = [
     {
       icon: Heart,
-      title: "Cuidado Personalizado",
-      description: "Cada cliente recebe atendimento dedicado e soluções sob medida para suas necessidades específicas."
+      title: "Atendimento Humanizado",
+      description: "Atendimento ágil e humanizado com proximidade e atenção personalizada para cada cliente."
     },
     {
       icon: Shield,
-      title: "Transparência",
-      description: "Informações claras sobre coberturas, valores e processos. Sem surpresas desagradáveis."
+      title: "Transparência Total",
+      description: "Transparência do início ao pós-venda, com informações claras e comunicação estratégica."
     },
     {
       icon: Target,
-      title: "Excelência",
-      description: "Buscamos constantemente a melhoria contínua em nossos serviços e relacionamento com clientes."
+      title: "Suporte Estratégico",
+      description: "Suporte estratégico para corretores com treinamentos, incentivos, campanhas e materiais personalizados."
     }
   ];
 
@@ -49,7 +49,7 @@ const About = () => {
               Nossa <span className="text-brand-blue">História</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Mais de duas décadas dedicadas à saúde e bem-estar de empresas e famílias brasileiras
+              Desde 1992 dedicados à saúde e bem-estar de empresas e famílias brasileiras
             </p>
           </div>
           
@@ -63,15 +63,15 @@ const About = () => {
                 </h3>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  A Security Saúde nasceu da visão de democratizar o acesso à saúde de qualidade. 
-                  Fundada há mais de 20 anos, nossa empresa se consolidou como líder em planos de 
-                  saúde para pequenas e médias empresas e pessoa física.
+                  Na Security Saúde, acreditamos que saúde de verdade começa com confiança.
+                  Somos uma corretora especializada em planos de saúde que vai além da venda: 
+                  acompanhamos cada cliente e corretor com atenção, proximidade e soluções personalizadas.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Nossa missão é oferecer soluções completas e acessíveis, desde MEI com 2 vidas 
-                  até empresas com 99 colaboradores, além de planos individuais e familiares com 
-                  a melhor rede credenciada do mercado.
+                  Desde 1992, oferecemos planos de saúde empresarial, individual e coletivo por adesão, 
+                  planos odontológicos, plano pet e assistência funerária. Nossa estrutura física em Recife 
+                  combinada com atuação digital garante atendimento humanizado e ágil.
                 </p>
               </div>
 

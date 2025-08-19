@@ -10,18 +10,18 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Planos de Saúde{" "}
+                Aqui, você escolhe o{" "}
                 <span className="text-brand-blue">
-                  Pessoa Física
+                  plano certo
                 </span>{" "}
-                e{" "}
+                com quem{" "}
                 <span className="text-primary">
-                  PME
+                  entende de verdade
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                Soluções completas em saúde para você, sua família e sua empresa. 
-                Cobertura nacional com a qualidade Security Saúde.
+                E cuida de você do começo ao fim. Somos uma corretora especializada 
+                que vai além da venda: acompanhamos cada cliente com atenção e proximidade.
               </p>
             </div>
             
@@ -30,14 +30,14 @@ const Hero = () => {
                 size="lg"
                 className="bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-brand-blue/20"
               >
-                Cotação Pessoa Física
+                Quero meu Plano
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:text-primary-foreground font-semibold px-8 py-4 text-lg rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                Cotação PME
+                Planos Empresariais
               </Button>
             </div>
           </div>

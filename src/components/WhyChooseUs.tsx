@@ -3,42 +3,45 @@ import { Card } from "@/components/ui/card";
 import { Network, Heart, Settings, Video, MapPin, Pill, Shield, Clock, Award, Users } from "lucide-react";
 
 const WhyChooseUs = () => {
-  const benefits = [
-    {
-      icon: Shield,
-      title: "Planos PME Flexíveis",
-      description: "Soluções customizadas para empresas de 2 a 99 colaboradores, com benefícios fiscais e gestão simplificada.",
-      highlight: "A partir de 2 vidas"
-    },
+  const clientBenefits = [
     {
       icon: Heart,
-      title: "Pessoa Física Completa",
-      description: "Planos individuais e familiares com cobertura nacional, telemedicina incluída e rede premium.",
-      highlight: "Cobertura nacional"
+      title: "Aconselhamento Consultivo",
+      description: "Sem vendas agressivas. Te ajudamos a escolher o plano ideal com transparência total.",
+      highlight: "Consultoria gratuita"
     },
     {
-      icon: Video,
-      title: "Telemedicina 24h",
-      description: "Consultas médicas online disponíveis 24 horas, 7 dias por semana, com especialistas qualificados.",
-      highlight: "Sempre disponível"
+      icon: Shield,
+      title: "Suporte Pós-Venda Contínuo",
+      description: "Acompanhamos você durante toda a utilização do plano, sempre disponíveis para ajudar.",
+      highlight: "Suporte contínuo"
     },
     {
       icon: Network,
-      title: "Rede Credenciada Premium",
-      description: "Mais de 500 prestadores credenciados, incluindo hospitais de referência e laboratórios especializados.",
-      highlight: "500+ prestadores"
-    },
+      title: "Parceiros Confiáveis",
+      description: "Trabalhamos com as melhores operadoras: Bradesco, SulAmérica, Unimed, Hapvida.",
+      highlight: "Melhores operadoras"
+    }
+  ];
+
+  const brokerBenefits = [
     {
-      icon: MapPin,
-      title: "Cobertura Regional",
-      description: "Atendimento em mais de 100 cidades do Nordeste, sempre próximo de você e sua empresa.",
-      highlight: "100+ cidades"
+      icon: Clock,
+      title: "Atendimento Ágil",
+      description: "Atendimento humanizado e ágil para corretores, com comunicação transparente.",
+      highlight: "Resposta rápida"
     },
     {
       icon: Award,
-      title: "20 Anos de Excelência",
-      description: "Mais de duas décadas cuidando da saúde com qualidade, confiança e atendimento humanizado.",
-      highlight: "Tradição e qualidade"
+      title: "Treinamentos Exclusivos",
+      description: "Eventos e treinamentos exclusivos para capacitação e desenvolvimento profissional.",
+      highlight: "Capacitação contínua"
+    },
+    {
+      icon: Settings,
+      title: "Estrutura Completa",
+      description: "Estrutura física em Recife + atuação digital, materiais personalizados para vendas.",
+      highlight: "Físico + Digital"
     }
   ];
 
@@ -55,39 +58,76 @@ const WhyChooseUs = () => {
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-            Por que escolher a{" "}
-            <span className="text-brand-blue">Security Saúde?</span>
+            Nossos{" "}
+            <span className="text-brand-blue">Diferenciais</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Mais de 20 anos oferecendo as melhores soluções em saúde para pessoas físicas e empresas
+            Atendimento humanizado, transparência e suporte estratégico desde 1992
           </p>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
-            <Card key={index} className="group p-6 border-border/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-background hover:border-brand-blue/30">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-14 h-14 bg-brand-blue/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-blue/20 transition-colors">
-                    <benefit.icon className="h-7 w-7 text-brand-blue" />
+        {/* Client Benefits */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
+            Para <span className="text-brand-blue">Clientes Finais</span>
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {clientBenefits.map((benefit, index) => (
+              <Card key={index} className="group p-6 border-border/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-background hover:border-brand-blue/30">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-14 h-14 bg-brand-blue/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-blue/20 transition-colors">
+                      <benefit.icon className="h-7 w-7 text-brand-blue" />
+                    </div>
+                    <span className="text-xs font-medium text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full">
+                      {benefit.highlight}
+                    </span>
                   </div>
-                  <span className="text-xs font-medium text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full">
-                    {benefit.highlight}
-                  </span>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-brand-blue transition-colors">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-foreground group-hover:text-brand-blue transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Broker Benefits */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
+            Para <span className="text-primary">Corretores</span>
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {brokerBenefits.map((benefit, index) => (
+              <Card key={index} className="group p-6 border-border/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-background hover:border-primary/30">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <benefit.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                      {benefit.highlight}
+                    </span>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Statistics Section */}
@@ -98,7 +138,7 @@ const WhyChooseUs = () => {
               <span className="text-brand-blue">excelência</span>
             </h3>
             <p className="text-muted-foreground">
-              Confiança construída ao longo de mais de duas décadas
+              Confiança construída ao longo de 32 anos de atuação
             </p>
           </div>
           
@@ -123,24 +163,24 @@ const WhyChooseUs = () => {
         <div className="text-center mt-16">
           <div className="bg-primary/5 rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-xl font-bold text-foreground mb-4">
-              Pronto para ter a melhor proteção em saúde?
+              Aqui, você escolhe o plano certo com quem entende de verdade
             </h3>
             <p className="text-muted-foreground mb-6">
-              Fale com nossos especialistas e descubra o plano ideal para você ou sua empresa
+              E cuida de você do começo ao fim. Entre em contato e tenha experiência completa do atendimento à utilização do plano.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
                 className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground px-8 transition-all"
               >
-                Solicitar Cotação PME
+                Falar com Consultor
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 transition-all"
               >
-                Cotação Pessoa Física
+                Solicitar Cotação
               </Button>
             </div>
           </div>

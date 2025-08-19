@@ -1,37 +1,51 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Star, Facebook, Instagram, Linkedin, Youtube, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Phone, Mail, Star, Instagram, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Footer = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
     {
-      text: "Atendimento excepcional e uma rede de hospitais de primeira qualidade. A Security Saúde realmente se preocupa com o bem-estar dos seus beneficiários.",
-      author: "Maria Regina",
-      role: "Empresária - Natal/RN",
-      initials: "MR",
+      text: "A Security Saúde realmente entende nossas necessidades. O atendimento é humanizado e eles cumprem tudo que prometem. Melhor escolha que fizemos para nossa empresa.",
+      author: "Mariana Santos",
+      role: "Empresária - Boa Viagem, Recife/PE",
+      initials: "MS",
       rating: 5
     },
     {
-      text: "Excelente plano PME! A gestão é muito simples e o atendimento aos nossos colaboradores é sempre rápido e eficiente.",
-      author: "Carlos Silva",
-      role: "Diretor de RH - João Pessoa/PB",
-      initials: "CS",
+      text: "Não é só um plano de saúde, é uma parceria de verdade. Eles nos acompanham desde o início e sempre estão disponíveis quando precisamos. Transparência total!",
+      author: "João Carlos",
+      role: "Diretor Comercial - Espinheiro, Recife/PE",
+      initials: "JC",
       rating: 5
     },
     {
-      text: "Minha família está protegida há mais de 5 anos. Telemedicina funciona perfeitamente e a rede credenciada é excelente.",
-      author: "Ana Paula",
-      role: "Arquiteta - Recife/PE",
-      initials: "AP",
+      text: "Escolhi a Security Saúde pela proximidade e confiança. Eles realmente cuidam da gente do começo ao fim, como prometem. Minha família se sente segura.",
+      author: "Patricia Oliveira",
+      role: "Médica - Casa Forte, Recife/PE",
+      initials: "PO",
       rating: 5
     },
     {
-      text: "Como MEI, encontrei na Security Saúde o plano ideal. Benefícios fiscais e cobertura completa a um preço justo.",
-      author: "Roberto Lima",
-      role: "Microempreendedor - Mossoró/RN",
-      initials: "RL",
+      text: "Atendimento consultivo de verdade, sem pressão para vender. Eles me ajudaram a encontrar o plano perfeito pro meu negócio. Recomendo demais!",
+      author: "Fernando Alves",
+      role: "MEI - Torre, Recife/PE",
+      initials: "FA",
+      rating: 5
+    },
+    {
+      text: "Desde que conheci a Security Saúde, sinto que tenho um parceiro de confiança. A equipe é próxima, humana e sempre resolve tudo rapidamente.",
+      author: "Luciana Medeiros",
+      role: "Advogada - Aflitos, Recife/PE",
+      initials: "LM",
+      rating: 5
+    },
+    {
+      text: "Estrutura física aqui em Recife faz toda diferença! Quando preciso, posso ir pessoalmente. Mas o atendimento digital também é excelente.",
+      author: "Roberto Tenório",
+      role: "Contador - Santo Antônio, Recife/PE",
+      initials: "RT",
       rating: 5
     }
   ];
@@ -46,10 +60,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Youtube, href: "#", label: "YouTube" }
+    { icon: Instagram, href: "#", label: "Instagram" }
   ];
 
   // Auto-rotate testimonials
@@ -83,8 +94,8 @@ const Footer = () => {
                 className="h-12 w-auto brightness-0 invert"
               />
               <p className="text-primary-foreground/80 leading-relaxed">
-                Há mais de 20 anos cuidando com excelência da saúde de nossos beneficiários. 
-                Qualidade, confiança e atendimento humanizado.
+                Desde 1992 cuidando com excelência da saúde de nossos beneficiários. 
+                Na Security Saúde, acreditamos que saúde de verdade começa com confiança.
               </p>
             </div>
 
@@ -92,21 +103,21 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
                 <div className="text-sm">
-                  <p>Av. Prudente de Morais, 4262</p>
-                  <p>Lagoa Nova - Natal/RN</p>
-                  <p>CEP: 59056-200</p>
+                  <p>Rua do Paissandu, 233</p>
+                  <p>Santo Antônio - Recife/PE</p>
+                  <p>CEP: 50010-240</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-brand-blue flex-shrink-0" />
-                <a href="tel:8440001234" className="text-sm hover:text-brand-blue transition-colors">
-                  (84) 4000-1234
+                <a href="tel:81999999999" className="text-sm hover:text-brand-blue transition-colors">
+                  (81) 9 9999-9999
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-brand-blue flex-shrink-0" />
-                <a href="mailto:contato@securitysaude.com.br" className="text-sm hover:text-brand-blue transition-colors">
-                  contato@securitysaude.com.br
+                <a href="mailto:segurosdesaude1@gmail.com" className="text-sm hover:text-brand-blue transition-colors">
+                  segurosdesaude1@gmail.com
                 </a>
               </div>
             </div>
