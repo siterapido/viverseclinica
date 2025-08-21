@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a React-based healthcare website (Security Saúde) built with Vite, TypeScript, and shadcn/ui components. The project uses Tailwind CSS for styling and React Router for navigation.
+This is a React-based healthcare website (Viverse Clínica) built with Vite, TypeScript, and shadcn/ui components. The project uses Tailwind CSS for styling and React Router for navigation.
 
 ## Development Commands
 
