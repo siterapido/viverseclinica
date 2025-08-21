@@ -1,245 +1,203 @@
-import { useState, useEffect } from "react";
-import { Card } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Star, Instagram, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Clock, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  const testimonials = [
-    {
-      text: "A Clínica Viverse oferece atendimento humanizado com preços acessíveis. Finalmente encontrei uma clínica que realmente se preocupa com o paciente. Recomendo!",
-      author: "Maria Silva",
-      role: "Professora - Nova Parnamirim, Parnamirim/RN",
-      initials: "MS",
-      rating: 5
-    },
-    {
-      text: "Excelente estrutura e profissionais qualificados. O atendimento pediátrico para minha filha foi excepcional. A Clínica Viverse é nossa escolha para toda família!",
-      author: "João Santos",
-      role: "Engenheiro - Parnamirim/RN",
-      initials: "JS",
-      rating: 5
-    },
-    {
-      text: "Consultas rápidas e precisas. O dermatologista foi muito atencioso e o preço muito acessível. Agora toda família se consulta na Clínica Viverse!",
-      author: "Ana Oliveira",
-      role: "Administradora - Natal/RN",
-      initials: "AO",
-      rating: 5
-    },
-    {
-      text: "Localização perfeita no AR Mall e atendimento de qualidade. A ultrassonografia foi rápida e o resultado muito preciso. Super recomendo a clínica!",
-      author: "Carlos Medeiros",
-      role: "Comerciante - Nova Parnamirim/RN",
-      initials: "CM",
-      rating: 5
-    },
-    {
-      text: "Atendimento em Medicina do Trabalho excelente para nossa empresa. Equipe preparada e preços justos. A Clínica Viverse é nossa parceira de confiança!",
-      author: "Luciana Costa",
-      role: "Gestora de RH - Parnamirim/RN",
-      initials: "LC",
-      rating: 5
-    },
-    {
-      text: "Clínico geral muito competente e estrutura moderna. Valores acessíveis e localização conveniente. A Clínica Viverse superou minhas expectativas!",
-      author: "Roberto Lima",
-      role: "Aposentado - Natal/RN",
-      initials: "RL",
-      rating: 5
-    }
-  ];
-
   const quickLinks = [
-    "Especialidades",
-    "Sobre a Clínica",
-    "Agendamento",
-    "Medicina do Trabalho",
-    "Contato",
-    "Política de Privacidade"
+    { name: "Especialidades", href: "#especialidades" },
+    { name: "Exames", href: "#exames" },
+    { name: "Diferenciais", href: "#diferenciais" },
+    { name: "Depoimentos", href: "#depoimentos" },
+    { name: "Contato", href: "#contato" },
+    { name: "Política de Privacidade", href: "#" }
   ];
 
-  const socialLinks = [
-    { icon: Instagram, href: "https://www.instagram.com/viverseclinica/", label: "Instagram" }
+  const specialties = [
+    "👶 Pediatria",
+    "🔬 Dermatologia", 
+    "📊 Ultrassonografia",
+    "💼 Medicina do Trabalho",
+    "👩🏽‍⚕️ Clínico Geral"
   ];
-
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Change every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   return (
-    <footer className="bg-primary text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50"></div>
+    <footer className="bg-white relative overflow-hidden">
+      {/* Background with subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-white"></div>
+      
       <div className="container mx-auto px-4 py-16 relative">
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div className="space-y-6">
+          <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
-              <img 
-                src="/logo-viverse-clinica.png" 
-                alt="Clínica Viverse" 
-                className="h-12 w-auto brightness-0 invert"
-              />
-              <p className="text-primary-foreground/80 leading-relaxed">
-                Clínica Viverse - Saúde para Todos 🍃<br />
-                Oferecemos atendimento humanizado, preços acessíveis e profissionais preparados para cuidar da sua saúde com toda atenção que você merece.
+              <div className="flex items-center space-x-3">
+                <img 
+                  src="/logo-viverse-clinica.png" 
+                  alt="Clínica Viverse" 
+                  className="h-12 w-auto"
+                />
+                <div className="flex items-center space-x-2">
+                  <span className="text-2xl">🍃</span>
+                  <span className="text-xl font-bold text-primary">Clínica Viverse</span>
+                </div>
+              </div>
+              
+              <p className="text-muted-foreground leading-relaxed max-w-md">
+                <strong className="text-primary">Saúde para Todos</strong> 🍃<br />
+                Oferecemos atendimento humanizado, preços acessíveis e profissionais 
+                preparados para cuidar da sua saúde com toda atenção que você merece.
               </p>
             </div>
 
-            <div className="space-y-3">
+            {/* Contact Info */}
+            <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <div className="text-sm">
-                  <p>Av. Abel Cabral, 2550</p>
+                <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <div className="text-sm text-muted-foreground">
+                  <p className="font-medium">📍 Av. Abel Cabral, 2550</p>
                   <p>Nova Parnamirim - Parnamirim/RN</p>
                   <p>CEP: 59151-250</p>
-                  <p className="text-xs text-primary-foreground/60 mt-1">Dentro do Prédio Comercial AR Mall</p>
+                  <p className="text-primary font-medium mt-1">
+                    ➡️ Dentro do Prédio Comercial AR Mall
+                  </p>
                 </div>
               </div>
+              
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-brand-blue flex-shrink-0" />
-                <a href="tel:5584994482552" className="text-sm hover:text-brand-blue transition-colors">
-                  (84) 99448-2552
+                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                <a 
+                  href="tel:5584994482552" 
+                  className="text-sm hover:text-primary transition-colors font-medium"
+                >
+                  📲 (84) 99448-2552
                 </a>
               </div>
+              
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-brand-blue flex-shrink-0" />
-                <a href="mailto:contato@viverseclinica.com.br" className="text-sm hover:text-brand-blue transition-colors">
+                <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                <a 
+                  href="mailto:contato@viverseclinica.com.br" 
+                  className="text-sm hover:text-primary transition-colors"
+                >
                   contato@viverseclinica.com.br
                 </a>
               </div>
-            </div>
-          </div>
-
-          {/* Customer Testimonials - Rotating */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-primary-foreground">O que nossos clientes dizem</h3>
-            
-            <div className="relative">
-              <Card className="bg-background border-border/20 p-6 shadow-xl">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-1">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  
-                  <blockquote className="text-foreground italic text-sm leading-relaxed min-h-[4rem]">
-                    "{testimonials[currentTestimonial].text}"
-                  </blockquote>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-brand-blue/10 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-medium text-brand-blue">{testimonials[currentTestimonial].initials}</span>
-                      </div>
-                      <div>
-                        <div className="font-medium text-sm text-foreground">{testimonials[currentTestimonial].author}</div>
-                        <div className="text-xs text-muted-foreground">{testimonials[currentTestimonial].role}</div>
-                      </div>
-                    </div>
-                    
-                    {/* Navigation buttons */}
-                    <div className="flex items-center space-x-2">
-                      <button
-                        onClick={prevTestimonial}
-                        className="w-8 h-8 bg-brand-blue/10 hover:bg-brand-blue/20 rounded-full flex items-center justify-center transition-colors"
-                        aria-label="Depoimento anterior"
-                      >
-                        <ChevronLeft className="w-4 h-4 text-brand-blue" />
-                      </button>
-                      <button
-                        onClick={nextTestimonial}
-                        className="w-8 h-8 bg-brand-blue/10 hover:bg-brand-blue/20 rounded-full flex items-center justify-center transition-colors"
-                        aria-label="Próximo depoimento"
-                      >
-                        <ChevronRight className="w-4 h-4 text-brand-blue" />
-                      </button>
-                    </div>
-                  </div>
-                  
-                  {/* Dots indicator */}
-                  <div className="flex justify-center space-x-2 pt-2">
-                    {testimonials.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentTestimonial(index)}
-                        className={`w-2 h-2 rounded-full transition-colors ${
-                          index === currentTestimonial ? 'bg-brand-blue' : 'bg-border'
-                        }`}
-                        aria-label={`Ir para depoimento ${index + 1}`}
-                      />
-                    ))}
-                  </div>
+              
+              <div className="flex items-center space-x-3">
+                <Clock className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="text-sm text-muted-foreground">
+                  <p>Segunda a Sexta: <span className="font-medium">8h às 18h</span></p>
+                  <p>Sábados: <span className="font-medium">8h às 12h</span></p>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Specialties */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold">Links Rápidos</h3>
+            <h3 className="text-xl font-semibold text-foreground">Nossas Especialidades</h3>
             
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
+              {specialties.map((specialty, index) => (
                 <li key={index}>
                   <a 
-                    href="#" 
-                    className="text-primary-foreground/80 hover:text-brand-blue transition-colors text-sm"
+                    href="#especialidades" 
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center space-x-2"
                   >
-                    {link}
+                    <span>{specialty}</span>
                   </a>
                 </li>
               ))}
             </ul>
 
             <div className="pt-4">
-              <h4 className="font-medium mb-3">Siga-nos nas redes sociais</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-brand-blue/20 transition-colors"
+              <a
+                href="https://wa.me/5584994482552?text=Olá! Gostaria de saber mais sobre as especialidades da Clínica Viverse."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button 
+                  size="sm"
+                  className="bg-brand-green hover:bg-brand-green/90 text-brand-green-foreground rounded-lg"
+                >
+                  📅 Agendar Consulta
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-foreground">Links Rápidos</h3>
+            
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a 
+                    href={link.href} 
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
-                    <social.icon className="w-5 h-5" />
+                    {link.name}
                   </a>
-                ))}
+                </li>
+              ))}
+            </ul>
+
+            {/* Social Links */}
+            <div className="pt-4">
+              <h4 className="font-medium mb-4 text-foreground">Siga-nos nas redes sociais</h4>
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.instagram.com/viverseclinica/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram da Clínica Viverse"
+                  className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-110"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                
+                <a
+                  href="https://wa.me/5584994482552"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp da Clínica Viverse"
+                  className="w-10 h-10 bg-green-500/10 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-110"
+                >
+                  <Phone className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8">
+        <div className="border-t border-primary/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-primary-foreground/70">
-              © 2024 Clínica Viverse. Todos os direitos reservados.
+            <div className="text-sm text-muted-foreground text-center md:text-left">
+              © 2024 <strong className="text-primary">Clínica Viverse</strong>. Todos os direitos reservados.
             </div>
-            <div className="flex items-center space-x-6 text-sm text-primary-foreground/70">
-              <a href="#" className="hover:text-brand-blue transition-colors">
+            
+            <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+              <a href="#" className="hover:text-primary transition-colors">
                 Termos de Uso
               </a>
-              <a href="#" className="hover:text-brand-blue transition-colors">
+              <a href="#" className="hover:text-primary transition-colors">
                 Política de Privacidade
               </a>
-              <a href="#" className="hover:text-brand-blue transition-colors">
+              <a href="#" className="hover:text-primary transition-colors">
                 LGPD
               </a>
+            </div>
+          </div>
+          
+          {/* Final tagline */}
+          <div className="text-center mt-6 pt-6 border-t border-primary/5">
+            <div className="flex items-center justify-center space-x-2">
+              <Heart className="h-4 w-4 text-primary" />
+              <span className="text-sm text-primary font-medium">
+                ✨ Saúde para Todos com qualidade e confiança
+              </span>
+              <Heart className="h-4 w-4 text-primary" />
             </div>
           </div>
         </div>

@@ -43,25 +43,37 @@ const Header = () => {
           <nav className="hidden lg:flex items-center justify-center flex-1 space-x-8">
             <Link 
               to="/" 
-              className="text-foreground hover:text-brand-blue transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Início
             </Link>
             <Link 
-              to="/sobre-nos" 
-              className="text-foreground hover:text-brand-blue transition-colors font-medium"
-            >
-              Sobre nós
-            </Link>
-            <Link 
               to="/especialidades" 
-              className="text-foreground hover:text-brand-blue transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Especialidades
             </Link>
             <Link 
+              to="/exames" 
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Exames
+            </Link>
+            <Link 
+              to="/diferenciais" 
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Diferenciais
+            </Link>
+            <Link 
+              to="/depoimentos" 
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Depoimentos
+            </Link>
+            <Link 
               to="/contato" 
-              className="text-foreground hover:text-brand-blue transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Contato
             </Link>
@@ -80,9 +92,10 @@ const Header = () => {
             
             {/* CTA Button - Hidden on mobile, shown on larger screens */}
             <Button 
-              className="hidden sm:flex bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-brand-blue/20"
+              className="hidden sm:flex bg-brand-green hover:bg-brand-green/90 text-brand-green-foreground font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse.', '_blank')}
             >
-              Agendar Consulta
+              Agende pelo WhatsApp
             </Button>
             
             {/* Mobile Menu Button */}
@@ -117,28 +130,42 @@ const Header = () => {
                 <Link 
                   to="/" 
                   onClick={closeMobileMenu}
-                  className="block py-4 px-4 text-foreground hover:text-brand-blue hover:bg-brand-blue/10 rounded-xl transition-all font-medium border border-transparent hover:border-brand-blue/20"
+                  className="block py-4 px-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
                 >
                   Início
                 </Link>
                 <Link 
-                  to="/sobre-nos" 
-                  onClick={closeMobileMenu}
-                  className="block py-4 px-4 text-foreground hover:text-brand-blue hover:bg-brand-blue/10 rounded-xl transition-all font-medium border border-transparent hover:border-brand-blue/20"
-                >
-                  Sobre nós
-                </Link>
-                <Link 
                   to="/especialidades" 
                   onClick={closeMobileMenu}
-                  className="block py-4 px-4 text-foreground hover:text-brand-blue hover:bg-brand-blue/10 rounded-xl transition-all font-medium border border-transparent hover:border-brand-blue/20"
+                  className="block py-4 px-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
                 >
                   Especialidades
                 </Link>
                 <Link 
+                  to="/exames" 
+                  onClick={closeMobileMenu}
+                  className="block py-4 px-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                >
+                  Exames
+                </Link>
+                <Link 
+                  to="/diferenciais" 
+                  onClick={closeMobileMenu}
+                  className="block py-4 px-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                >
+                  Diferenciais
+                </Link>
+                <Link 
+                  to="/depoimentos" 
+                  onClick={closeMobileMenu}
+                  className="block py-4 px-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
+                >
+                  Depoimentos
+                </Link>
+                <Link 
                   to="/contato" 
                   onClick={closeMobileMenu}
-                  className="block py-4 px-4 text-foreground hover:text-brand-blue hover:bg-brand-blue/10 rounded-xl transition-all font-medium border border-transparent hover:border-brand-blue/20"
+                  className="block py-4 px-4 text-foreground hover:text-primary hover:bg-primary/10 rounded-xl transition-all font-medium border border-transparent hover:border-primary/20"
                 >
                   Contato
                 </Link>
@@ -160,10 +187,10 @@ const Header = () => {
                 {/* Mobile CTA Button */}
                 <div className="pt-4">
                   <Button 
-                    onClick={closeMobileMenu}
-                    className="w-full bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
+                    onClick={() => {closeMobileMenu(); window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse.', '_blank');}}
+                    className="w-full bg-brand-green hover:bg-brand-green/90 text-brand-green-foreground font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
                   >
-                    Agendar Consulta
+                    Agende pelo WhatsApp
                   </Button>
                 </div>
               </div>
