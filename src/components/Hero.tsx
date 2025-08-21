@@ -9,35 +9,55 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
+              <div className="flex items-center space-x-2 mb-4">
+                <span className="text-2xl">🍃</span>
+                <span className="text-lg font-medium text-brand-blue">Clínica Viverse</span>
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Aqui, você escolhe o{" "}
-                <span className="text-brand-blue">
-                  plano certo
-                </span>{" "}
-                com quem{" "}
                 <span className="text-primary">
-                  entende de verdade
+                  Saúde para Todos
+                </span>{" "}
+                com{" "}
+                <span className="text-brand-blue">
+                  conforto e qualidade
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                E cuida de você do começo ao fim. Somos uma corretora especializada 
-                que vai além da venda: acompanhamos cada cliente com atenção e proximidade.
+                👩🏽‍⚕️ <strong>Consultas acessíveis em diversas especialidades</strong><br/>
+                Na Clínica Viverse, você encontra atendimento humanizado, preços acessíveis 
+                e profissionais preparados para cuidar da sua saúde com toda atenção que você merece.
               </p>
             </div>
             
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <span className="text-green-500">✅</span>
+                <span>Conforto no atendimento</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <span className="text-green-500">✅</span>
+                <span>Acessibilidade nos valores</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <span className="text-green-500">✅</span>
+                <span>Diversas especialidades</span>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg"
                 className="bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-brand-blue/20"
+                onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse.', '_blank')}
               >
-                Quero meu Plano
+                📲 Agendar Consulta
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
                 className="border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 hover:text-primary-foreground font-semibold px-8 py-4 text-lg rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                Planos Empresariais
+                Ver Especialidades
               </Button>
             </div>
           </div>

@@ -1,9 +1,9 @@
 const WhatsAppButton = () => {
-  // Número do WhatsApp da Security Saúde (deve ser atualizado com o número real)
-  const whatsappNumber = "5581999999999";
+  // Número do WhatsApp da Clínica Viverse
+  const whatsappNumber = "5584994482552";
   
   const handleWhatsAppClick = () => {
-    const message = "Olá! Gostaria de saber mais sobre os planos de saúde da Security Saúde.";
+    const message = "Olá! Gostaria de agendar uma consulta na Clínica Viverse.";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");

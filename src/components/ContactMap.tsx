@@ -25,9 +25,10 @@ const ContactMap = () => {
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Endereço</h4>
                     <p className="text-muted-foreground">
-                      Av. das Avenidas, 123<br />
-                      Centro - Natal/RN<br />
-                      CEP: 59000-000
+                      Av. Abel Cabral, 2550<br />
+                      Nova Parnamirim - Parnamirim/RN<br />
+                      CEP: 59151-250<br />
+                      <span className="text-sm">Dentro do Prédio Comercial AR Mall</span>
                     </p>
                   </div>
                 </div>
@@ -37,12 +38,12 @@ const ContactMap = () => {
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Como chegar</h4>
                     <p className="text-muted-foreground mb-3">
-                      Localizado no centro de Natal, próximo aos principais pontos comerciais e com fácil acesso por transporte público.
+                      Localizada no AR Mall em Nova Parnamirim, com estacionamento gratuito e fácil acesso pela Av. Abel Cabral.
                     </p>
                     <Button 
                       variant="outline" 
                       size="sm"
-                      onClick={() => window.open('https://maps.google.com/?q=Natal,RN', '_blank')}
+                      onClick={() => window.open('https://maps.google.com/?q=Av.+Abel+Cabral,+2550,+Nova+Parnamirim,+Parnamirim+RN', '_blank')}
                     >
                       Ver no Google Maps
                     </Button>
@@ -90,9 +91,10 @@ const ContactMap = () => {
             <div className="p-6">
               <div className="text-center">
                 <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Security Saúde</strong><br />
-                  Av. das Avenidas, 123 - Centro<br />
-                  Natal/RN - CEP: 59000-000
+                  <strong className="text-foreground">Clínica Viverse</strong><br />
+                  Av. Abel Cabral, 2550 - Nova Parnamirim<br />
+                  Parnamirim/RN - CEP: 59151-250<br />
+                  <span className="text-xs">Dentro do AR Mall</span>
                 </p>
               </div>
             </div>

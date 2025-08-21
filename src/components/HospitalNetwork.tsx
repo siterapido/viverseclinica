@@ -1,68 +1,69 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Star, ChevronLeft, ChevronRight, Building2, Heart, Activity } from "lucide-react";
+import { MapPin, Star, ChevronLeft, ChevronRight, Building2, Heart, Activity, Shield } from "lucide-react";
 
 const HospitalNetwork = () => {
-  const [currentHospital, setCurrentHospital] = useState(0);
+  const [currentPartner, setCurrentPartner] = useState(0);
 
-  const hospitals = [
+  const partners = [
     {
-      name: "Hospital Santa Catarina",
-      location: "Natal - RN",
+      name: "Laboratórios Parceiros",
+      location: "Parnamirim e Região - RN",
       rating: 5.0,
-      description: "Referência em atendimento de alta complexidade, com tecnologia de ponta e equipe médica especializada em diversas áreas.",
-      specialties: ["UTI Neonatal", "Cardiologia", "Oncologia"],
-      icon: Building2,
-      color: "brand-blue"
-    },
-    {
-      name: "Hospital Universitário Onofre Lopes",
-      location: "Natal - RN",
-      rating: 4.8,
-      description: "Centro de excelência em ensino e pesquisa médica, oferecendo atendimento humanizado com foco em inovação e qualidade.",
-      specialties: ["Neurologia", "Ortopedia", "Pediatria"],
-      icon: Heart,
-      color: "primary"
-    },
-    {
-      name: "Hospital do Coração",
-      location: "João Pessoa - PB",
-      rating: 4.9,
-      description: "Especializado em cardiologia e cirurgia cardíaca, com equipamentos de última geração e equipe altamente qualificada.",
-      specialties: ["Cardiologia", "Hemodinâmica", "Cirurgia Cardíaca"],
+      description: "Parcerias estratégicas com os melhores laboratórios da região para exames complementares rápidos e precisos.",
+      specialties: ["Análises Clínicas", "Exames de Imagem", "Patologia"],
       icon: Activity,
       color: "brand-blue"
     },
     {
-      name: "Real Hospital Português",
-      location: "Recife - PE",
-      rating: 4.7,
-      description: "Tradição em excelência médica há mais de 180 anos, oferecendo serviços de alta complexidade e atendimento humanizado.",
-      specialties: ["Emergência", "Maternidade", "Check-up"],
+      name: "Rede Credenciada de Especialistas",
+      location: "Grande Natal - RN",
+      rating: 4.9,
+      description: "Ampla rede de médicos especialistas credenciados para encaminhamentos quando necessário.",
+      specialties: ["Cardiologia", "Ginecologia", "Ortopedia"],
+      icon: Heart,
+      color: "primary"
+    },
+    {
+      name: "Hospitais de Referência",
+      location: "Natal e Região - RN",
+      rating: 4.8,
+      description: "Convênios com hospitais de referência para casos que requerem internação e procedimentos complexos.",
+      specialties: ["Urgência", "Emergência", "Cirurgias"],
       icon: Building2,
+      color: "brand-blue"
+    },
+    {
+      name: "Farmácias Conveniadas",
+      location: "Nova Parnamirim - RN",
+      rating: 5.0,
+      description: "Descontos especiais em medicamentos nas farmácias parceiras próximas à clínica.",
+      specialties: ["Medicamentos", "Genéricos", "Manipulados"],
+      icon: Shield,
       color: "primary"
     }
   ];
 
-  // Auto-rotate hospitals
+  // Auto-rotate partners
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentHospital((prev) => (prev + 1) % hospitals.length);
+      setCurrentPartner((prev) => (prev + 1) % partners.length);
     }, 4000); // Change every 4 seconds
 
     return () => clearInterval(interval);
-  }, [hospitals.length]);
+  }, [partners.length]);
 
-  const nextHospital = () => {
-    setCurrentHospital((prev) => (prev + 1) % hospitals.length);
+  const nextPartner = () => {
+    setCurrentPartner((prev) => (prev + 1) % partners.length);
   };
 
-  const prevHospital = () => {
-    setCurrentHospital((prev) => (prev - 1 + hospitals.length) % hospitals.length);
+  const prevPartner = () => {
+    setCurrentPartner((prev) => (prev - 1 + partners.length) % partners.length);
   };
 
-  const currentData = hospitals[currentHospital];
+  const currentData = partners[currentPartner];
+  
   return (
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -70,38 +71,62 @@ const HospitalNetwork = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
+              <div className="flex items-center space-x-2 mb-4">
+                <span className="text-2xl">🍃</span>
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                Tenha acesso a uma ampla rede de{" "}
-                <span className="text-brand-blue">hospitais de qualidade</span>
+                Conheça nossa rede de{" "}
+                <span className="text-brand-blue">parceiros qualificados</span>
               </h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Nossa infraestrutura conta com parcerias estratégicas com os principais 
-                hospitais e clínicas da região. Garantimos atendimento de excelência com 
-                tecnologia de ponta e profissionais qualificados, sempre próximo de você.
+                A Clínica Viverse trabalha com uma rede de parceiros estratégicos 
+                para garantir que você tenha acesso completo aos melhores serviços de saúde da região. 
+                Cuidamos de você com qualidade e confiança em todos os momentos.
               </p>
+              
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-sm">
+                  <span className="text-green-500">✔</span>
+                  <span>Rede credenciada de qualidade</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm">
+                  <span className="text-green-500">✔</span>
+                  <span>Atendimento próximo e acessível</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm">
+                  <span className="text-green-500">✔</span>
+                  <span>Parcerias estratégicas confiáveis</span>
+                </div>
+              </div>
             </div>
 
-            <Button 
-              size="lg"
-              className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground rounded-lg"
+            <a
+              href="https://wa.me/5584994482552?text=Olá! Gostaria de conhecer mais sobre os parceiros da Clínica Viverse."
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Solicitar Cotação
-            </Button>
+              <Button 
+                size="lg"
+                className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground rounded-lg"
+              >
+                📲 Saber Mais pelo WhatsApp
+              </Button>
+            </a>
           </div>
 
-          {/* Right Content - Rotating Hospital Cards */}
+          {/* Right Content - Rotating Partner Cards */}
           <div className="space-y-6">
             <div className="relative">
               <Card className="overflow-hidden border-border/50 shadow-xl transition-all duration-500">
                 <div className="relative">
-                  {/* Hospital Image Placeholder */}
+                  {/* Partner Image Placeholder */}
                   <div className={`h-48 bg-${currentData.color}/10 flex items-center justify-center transition-all duration-500`}>
                     <div className="text-center space-y-2">
                       <div className={`w-16 h-16 bg-${currentData.color}/20 rounded-full mx-auto flex items-center justify-center`}>
                         <currentData.icon className={`w-8 h-8 text-${currentData.color}`} />
                       </div>
-                      <p className="text-sm text-muted-foreground">Hospital de Referência</p>
+                      <p className="text-sm text-muted-foreground">Parceiro Qualificado</p>
                     </div>
                   </div>
                   
@@ -116,9 +141,9 @@ const HospitalNetwork = () => {
                   {/* Navigation Controls */}
                   <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
                     <button
-                      onClick={prevHospital}
+                      onClick={prevPartner}
                       className="w-10 h-10 bg-background/90 hover:bg-background rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-105"
-                      aria-label="Hospital anterior"
+                      aria-label="Parceiro anterior"
                     >
                       <ChevronLeft className="w-5 h-5 text-foreground" />
                     </button>
@@ -126,9 +151,9 @@ const HospitalNetwork = () => {
                   
                   <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
                     <button
-                      onClick={nextHospital}
+                      onClick={nextPartner}
                       className="w-10 h-10 bg-background/90 hover:bg-background rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-105"
-                      aria-label="Próximo hospital"
+                      aria-label="Próximo parceiro"
                     >
                       <ChevronRight className="w-5 h-5 text-foreground" />
                     </button>
@@ -161,22 +186,47 @@ const HospitalNetwork = () => {
                     
                     {/* Dots Indicator */}
                     <div className="flex justify-center space-x-2 pt-4">
-                      {hospitals.map((_, index) => (
+                      {partners.map((_, index) => (
                         <button
                           key={index}
-                          onClick={() => setCurrentHospital(index)}
+                          onClick={() => setCurrentPartner(index)}
                           className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                            index === currentHospital 
+                            index === currentPartner 
                               ? `bg-${currentData.color}` 
                               : 'bg-border hover:bg-border/60'
                           }`}
-                          aria-label={`Ir para hospital ${index + 1}`}
+                          aria-label={`Ir para parceiro ${index + 1}`}
                         />
                       ))}
                     </div>
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Info Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-background rounded-2xl p-8 max-w-4xl mx-auto border border-border/50 shadow-lg">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              ✨ <span className="text-brand-blue">Clínica Viverse</span> – Sua saúde em boas mãos
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Com nossa rede de parceiros qualificados, garantimos que você tenha acesso aos melhores 
+              serviços de saúde da região, sempre com preços acessíveis e atendimento humanizado.
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="text-center">
+                <p className="text-sm text-muted-foreground">
+                  📍 <strong>Localização:</strong> Av. Abel Cabral, 2550 – AR Mall
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-muted-foreground">
+                  📲 <strong>WhatsApp:</strong> (84) 99448-2552
+                </p>
+              </div>
             </div>
           </div>
         </div>

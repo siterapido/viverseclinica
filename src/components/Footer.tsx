@@ -7,60 +7,60 @@ const Footer = () => {
 
   const testimonials = [
     {
-      text: "A Security Saúde realmente entende nossas necessidades. O atendimento é humanizado e eles cumprem tudo que prometem. Melhor escolha que fizemos para nossa empresa.",
-      author: "Mariana Santos",
-      role: "Empresária - Boa Viagem, Recife/PE",
+      text: "A Clínica Viverse oferece atendimento humanizado com preços acessíveis. Finalmente encontrei uma clínica que realmente se preocupa com o paciente. Recomendo!",
+      author: "Maria Silva",
+      role: "Professora - Nova Parnamirim, Parnamirim/RN",
       initials: "MS",
       rating: 5
     },
     {
-      text: "Não é só um plano de saúde, é uma parceria de verdade. Eles nos acompanham desde o início e sempre estão disponíveis quando precisamos. Transparência total!",
-      author: "João Carlos",
-      role: "Diretor Comercial - Espinheiro, Recife/PE",
-      initials: "JC",
+      text: "Excelente estrutura e profissionais qualificados. O atendimento pediátrico para minha filha foi excepcional. A Clínica Viverse é nossa escolha para toda família!",
+      author: "João Santos",
+      role: "Engenheiro - Parnamirim/RN",
+      initials: "JS",
       rating: 5
     },
     {
-      text: "Escolhi a Security Saúde pela proximidade e confiança. Eles realmente cuidam da gente do começo ao fim, como prometem. Minha família se sente segura.",
-      author: "Patricia Oliveira",
-      role: "Médica - Casa Forte, Recife/PE",
-      initials: "PO",
+      text: "Consultas rápidas e precisas. O dermatologista foi muito atencioso e o preço muito acessível. Agora toda família se consulta na Clínica Viverse!",
+      author: "Ana Oliveira",
+      role: "Administradora - Natal/RN",
+      initials: "AO",
       rating: 5
     },
     {
-      text: "Atendimento consultivo de verdade, sem pressão para vender. Eles me ajudaram a encontrar o plano perfeito pro meu negócio. Recomendo demais!",
-      author: "Fernando Alves",
-      role: "MEI - Torre, Recife/PE",
-      initials: "FA",
+      text: "Localização perfeita no AR Mall e atendimento de qualidade. A ultrassonografia foi rápida e o resultado muito preciso. Super recomendo a clínica!",
+      author: "Carlos Medeiros",
+      role: "Comerciante - Nova Parnamirim/RN",
+      initials: "CM",
       rating: 5
     },
     {
-      text: "Desde que conheci a Security Saúde, sinto que tenho um parceiro de confiança. A equipe é próxima, humana e sempre resolve tudo rapidamente.",
-      author: "Luciana Medeiros",
-      role: "Advogada - Aflitos, Recife/PE",
-      initials: "LM",
+      text: "Atendimento em Medicina do Trabalho excelente para nossa empresa. Equipe preparada e preços justos. A Clínica Viverse é nossa parceira de confiança!",
+      author: "Luciana Costa",
+      role: "Gestora de RH - Parnamirim/RN",
+      initials: "LC",
       rating: 5
     },
     {
-      text: "Estrutura física aqui em Recife faz toda diferença! Quando preciso, posso ir pessoalmente. Mas o atendimento digital também é excelente.",
-      author: "Roberto Tenório",
-      role: "Contador - Santo Antônio, Recife/PE",
-      initials: "RT",
+      text: "Clínico geral muito competente e estrutura moderna. Valores acessíveis e localização conveniente. A Clínica Viverse superou minhas expectativas!",
+      author: "Roberto Lima",
+      role: "Aposentado - Natal/RN",
+      initials: "RL",
       rating: 5
     }
   ];
 
   const quickLinks = [
-    "Planos de Saúde",
-    "Sobre a Security",
-    "Rede Credenciada",
-    "Telemedicina",
+    "Especialidades",
+    "Sobre a Clínica",
+    "Agendamento",
+    "Medicina do Trabalho",
     "Contato",
     "Política de Privacidade"
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" }
+    { icon: Instagram, href: "https://www.instagram.com/viverseclinica/", label: "Instagram" }
   ];
 
   // Auto-rotate testimonials
@@ -89,13 +89,13 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <img 
-                src="/logo-security-saude.png" 
-                alt="Security Saúde" 
+                src="/logo-viverse-clinica.png" 
+                alt="Clínica Viverse" 
                 className="h-12 w-auto brightness-0 invert"
               />
               <p className="text-primary-foreground/80 leading-relaxed">
-                Desde 1992 cuidando com excelência da saúde de nossos beneficiários. 
-                Na Security Saúde, acreditamos que saúde de verdade começa com confiança.
+                Clínica Viverse - Saúde para Todos 🍃<br />
+                Oferecemos atendimento humanizado, preços acessíveis e profissionais preparados para cuidar da sua saúde com toda atenção que você merece.
               </p>
             </div>
 
@@ -103,21 +103,22 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
                 <div className="text-sm">
-                  <p>Rua do Paissandu, 233</p>
-                  <p>Santo Antônio - Recife/PE</p>
-                  <p>CEP: 50010-240</p>
+                  <p>Av. Abel Cabral, 2550</p>
+                  <p>Nova Parnamirim - Parnamirim/RN</p>
+                  <p>CEP: 59151-250</p>
+                  <p className="text-xs text-primary-foreground/60 mt-1">Dentro do Prédio Comercial AR Mall</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-brand-blue flex-shrink-0" />
-                <a href="tel:81999999999" className="text-sm hover:text-brand-blue transition-colors">
-                  (81) 9 9999-9999
+                <a href="tel:5584994482552" className="text-sm hover:text-brand-blue transition-colors">
+                  (84) 99448-2552
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-brand-blue flex-shrink-0" />
-                <a href="mailto:segurosdesaude1@gmail.com" className="text-sm hover:text-brand-blue transition-colors">
-                  segurosdesaude1@gmail.com
+                <a href="mailto:contato@viverseclinica.com.br" className="text-sm hover:text-brand-blue transition-colors">
+                  contato@viverseclinica.com.br
                 </a>
               </div>
             </div>
@@ -227,7 +228,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-primary-foreground/70">
-              © 2024 Security Saúde. Todos os direitos reservados.
+              © 2024 Clínica Viverse. Todos os direitos reservados.
             </div>
             <div className="flex items-center space-x-6 text-sm text-primary-foreground/70">
               <a href="#" className="hover:text-brand-blue transition-colors">

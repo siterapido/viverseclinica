@@ -9,7 +9,7 @@ const ContactInfo = () => {
             Entre em Contato
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Estamos aqui para ajudar você a encontrar o melhor plano de saúde para suas necessidades.
+            Estamos aqui para cuidar da sua saúde com carinho e atenção. Agende sua consulta conosco!
           </p>
         </div>
 
@@ -19,8 +19,8 @@ const ContactInfo = () => {
               <Phone className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Telefone</h3>
-            <p className="text-white/90">(84) 4000-1234</p>
-            <p className="text-white/90 text-sm mt-1">Atendimento gratuito</p>
+            <p className="text-white/90">(84) 99448-2552</p>
+            <p className="text-white/90 text-sm mt-1">WhatsApp para agendamento</p>
           </div>
 
           <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -28,7 +28,7 @@ const ContactInfo = () => {
               <Mail className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-            <p className="text-white/90">contato@securitysaude.com.br</p>
+            <p className="text-white/90">contato@viverseclinica.com.br</p>
             <p className="text-white/90 text-sm mt-1">Resposta em até 24h</p>
           </div>
 
@@ -37,8 +37,9 @@ const ContactInfo = () => {
               <MapPin className="h-8 w-8 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Endereço</h3>
-            <p className="text-white/90">Av. das Avenidas, 123</p>
-            <p className="text-white/90">Natal/RN - CEP: 59000-000</p>
+            <p className="text-white/90">Av. Abel Cabral, 2550</p>
+            <p className="text-white/90">Nova Parnamirim/RN</p>
+            <p className="text-white/90 text-sm mt-1">Dentro do AR Mall</p>
           </div>
 
           <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6">

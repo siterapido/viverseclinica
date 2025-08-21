@@ -33,8 +33,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/logo-security-saude.png" 
-              alt="Security Saúde" 
+              src="/logo-viverse-clinica.png" 
+              alt="Clínica Viverse" 
               className="h-10 w-auto"
             />
           </div>
@@ -54,10 +54,10 @@ const Header = () => {
               Sobre nós
             </Link>
             <Link 
-              to="/corretor" 
+              to="/especialidades" 
               className="text-foreground hover:text-brand-blue transition-colors font-medium"
             >
-              Corretor
+              Especialidades
             </Link>
             <Link 
               to="/contato" 
@@ -71,18 +71,18 @@ const Header = () => {
           <div className="flex items-center space-x-4 ml-auto">
             {/* Phone - Hidden on small screens */}
             <a 
-              href="tel:81999999999" 
+              href="tel:5584994482552" 
               className="hidden md:flex items-center space-x-2 text-primary hover:text-brand-blue transition-colors"
             >
               <Phone className="h-4 w-4" />
-              <span>(81) 9 9999-9999</span>
+              <span>(84) 99448-2552</span>
             </a>
             
             {/* CTA Button - Hidden on mobile, shown on larger screens */}
             <Button 
               className="hidden sm:flex bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-brand-blue/20"
             >
-              Solicitar Cotação
+              Agendar Consulta
             </Button>
             
             {/* Mobile Menu Button */}
@@ -129,11 +129,11 @@ const Header = () => {
                   Sobre nós
                 </Link>
                 <Link 
-                  to="/corretor" 
+                  to="/especialidades" 
                   onClick={closeMobileMenu}
                   className="block py-4 px-4 text-foreground hover:text-brand-blue hover:bg-brand-blue/10 rounded-xl transition-all font-medium border border-transparent hover:border-brand-blue/20"
                 >
-                  Área do Corretor
+                  Especialidades
                 </Link>
                 <Link 
                   to="/contato" 
@@ -146,12 +146,12 @@ const Header = () => {
                 {/* Mobile Contact Info */}
                 <div className="pt-4 mt-4 border-t border-border/30">
                   <a 
-                    href="tel:81999999999" 
+                    href="tel:5584994482552" 
                     className="flex items-center space-x-3 py-4 px-4 text-primary hover:text-brand-blue hover:bg-brand-blue/10 rounded-xl transition-all border border-transparent hover:border-brand-blue/20"
                   >
                     <Phone className="h-5 w-5" />
                     <div className="flex flex-col">
-                      <span className="font-medium">(81) 9 9999-9999</span>
+                      <span className="font-medium">(84) 99448-2552</span>
                       <span className="text-xs text-muted-foreground">Ligue agora</span>
                     </div>
                   </a>
@@ -163,7 +163,7 @@ const Header = () => {
                     onClick={closeMobileMenu}
                     className="w-full bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
                   >
-                    Solicitar Cotação
+                    Agendar Consulta
                   </Button>
                 </div>
               </div>
