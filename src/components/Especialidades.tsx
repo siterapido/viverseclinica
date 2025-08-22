@@ -24,7 +24,7 @@ const Especialidades = () => {
       description: "Atendimento humanizado para toda a família"
     },
     {
-      image: "/Imagens/closeup-de-um-apoio-de-maos.jpg",
+      image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop",
       title: "Pediatria",
       description: "Cuidado completo para a saúde das crianças"
     }
