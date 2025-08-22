@@ -107,8 +107,8 @@ const HospitalNetwork = () => {
               rel="noopener noreferrer"
             >
               <Button 
+                variant="gradient"
                 size="lg"
-                className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground rounded-lg"
               >
                 📲 Saber Mais pelo WhatsApp
               </Button>

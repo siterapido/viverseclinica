@@ -41,7 +41,7 @@ const ContactMap = () => {
                       Localizada no AR Mall em Nova Parnamirim, com estacionamento gratuito e fácil acesso pela Av. Abel Cabral.
                     </p>
                     <Button 
-                      variant="outline" 
+                      variant="gradient" 
                       size="sm"
                       onClick={() => window.open('https://maps.google.com/?q=Av.+Abel+Cabral,+2550,+Nova+Parnamirim,+Parnamirim+RN', '_blank')}
                     >
@@ -80,8 +80,8 @@ const ContactMap = () => {
                   Clique no botão abaixo para visualizar nossa localização no Google Maps
                 </p>
                 <Button 
+                  variant="gradient"
                   onClick={() => window.open('https://maps.google.com/?q=Natal,RN', '_blank')}
-                  className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground"
                 >
                   Abrir Google Maps
                 </Button>

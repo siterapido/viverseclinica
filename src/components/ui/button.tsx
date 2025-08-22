@@ -18,6 +18,11 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        minimal: "bg-brand-accent hover:bg-brand-accent/90 text-black font-normal rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105",
+        "minimal-outline": "border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-black font-normal rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg",
+        "outline-teal": "border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white font-normal rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg",
+        elegant: "bg-gradient-to-r from-brand-accent to-brand-accent/80 hover:from-brand-accent/90 hover:to-brand-accent text-black font-medium rounded-full transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-105 border border-brand-accent/20 backdrop-blur-sm",
+        gradient: "bg-brand-green text-white font-normal rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 relative border-2 border-transparent hover:bg-gradient-to-r hover:from-brand-accent hover:to-brand-accent hover:shadow-[0_0_20px_rgba(194,216,108,0.4)] hover:border-brand-accent/30",
       },
       size: {
         default: "h-10 px-4 py-2",

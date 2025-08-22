@@ -12,7 +12,14 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform transition-all duration-200 z-50 flex items-center justify-center hover:scale-105"
+      className="fixed bottom-6 right-6 w-12 h-12 text-white rounded-full shadow-lg hover:shadow-xl transform transition-all duration-200 z-50 flex items-center justify-center hover:scale-105"
+      style={{ backgroundColor: '#C2D86C' }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = '#B6C85E';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = '#C2D86C';
+      }}
       aria-label="Falar no WhatsApp"
     >
       {/* WhatsApp icon SVG */}

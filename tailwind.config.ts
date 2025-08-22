@@ -32,6 +32,22 @@ export default {
 					DEFAULT: 'hsl(var(--brand-blue))',
 					foreground: 'hsl(var(--brand-blue-foreground))'
 				},
+				'brand-green': {
+					DEFAULT: 'hsl(var(--brand-green))',
+					foreground: 'hsl(var(--brand-green-foreground))'
+				},
+				'brand-accent': {
+					DEFAULT: 'hsl(var(--brand-accent))',
+					foreground: 'hsl(var(--brand-accent-foreground))'
+				},
+				'brand-light-green': {
+					DEFAULT: 'hsl(var(--brand-light-green))',
+					foreground: 'hsl(var(--brand-light-green-foreground))'
+				},
+				'brand-light-teal': {
+					DEFAULT: 'hsl(var(--brand-light-teal))',
+					foreground: 'hsl(var(--brand-light-teal-foreground))'
+				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'

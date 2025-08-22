@@ -18,14 +18,14 @@ const Index = () => {
         <section id="especialidades">
           <Especialidades />
         </section>
-        <section id="exames">
-          <ExamesPreventivos />
-        </section>
         <section id="diferenciais">
           <Diferenciais />
         </section>
         <section id="depoimentos">
           <Depoimentos />
+        </section>
+        <section id="convenios">
+          <ExamesPreventivos />
         </section>
         <section id="localizacao">
           <Localizacao />

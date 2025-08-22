@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Users, Award, MapPin, Target, Heart, Shield, Stethoscope, Clock, CheckCircle } from "lucide-react";
 
 const About = () => {
@@ -80,8 +81,9 @@ const About = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <span className="text-3xl">🍃</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                <span className="text-brand-blue">Clínica Viverse</span> - Saúde para Todos
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground relative inline-block group">
+                <span className="text-brand-green">Clínica Viverse</span> - Saúde para Todos
+                <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-[#60A4A3] transition-all duration-500 group-hover:w-full"></span>
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -95,7 +97,7 @@ const About = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-foreground leading-tight">
                   Consultas acessíveis em{" "}
-                  <span className="text-brand-blue">diversas especialidades</span>
+                  <span className="text-brand-green">diversas especialidades</span>
                 </h3>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -105,27 +107,27 @@ const About = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   <div className="flex items-center space-x-2 text-sm">
-                    <span className="text-green-500">✔</span>
+                    <span className="text-brand-accent">✔</span>
                     <span>Atendimento rápido e acessível</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm">
-                    <span className="text-green-500">✔</span>
+                    <span className="text-brand-accent">✔</span>
                     <span>Estrutura confortável e moderna</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm">
-                    <span className="text-green-500">✔</span>
+                    <span className="text-brand-accent">✔</span>
                     <span>Profissionais qualificados</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm">
-                    <span className="text-green-500">✔</span>
+                    <span className="text-brand-accent">✔</span>
                     <span>Localização de fácil acesso</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm">
-                    <span className="text-green-500">✔</span>
+                    <span className="text-brand-accent">✔</span>
                     <span>Diversas especialidades</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm">
-                    <span className="text-green-500">✔</span>
+                    <span className="text-brand-accent">✔</span>
                     <span>Preços justos e acessíveis</span>
                   </div>
                 </div>
@@ -136,11 +138,11 @@ const About = () => {
                 {stats.map((stat, index) => (
                   <Card key={index} className="p-6 text-center border-border/50 hover:shadow-lg transition-shadow bg-background">
                     <div className="space-y-3">
-                      <div className="mx-auto w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center">
-                        <stat.icon className="h-6 w-6 text-brand-blue" />
+                      <div className="mx-auto w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center">
+                        <stat.icon className="h-6 w-6 text-brand-green" />
                       </div>
                       <div className="space-y-1">
-                        <div className="text-2xl font-bold text-brand-blue">
+                        <div className="text-2xl font-bold text-brand-green">
                           {stat.number}
                         </div>
                         <div className="text-sm text-muted-foreground">
@@ -158,13 +160,13 @@ const About = () => {
               <div className="bg-secondary/30 rounded-2xl p-8 border border-border/50">
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-foreground mb-6">
-                    Nossa <span className="text-brand-blue">Localização</span>
+                    Nossa <span className="text-brand-green">Localização</span>
                   </h3>
                   
                   <div className="space-y-6">
                     <div className="bg-background/50 rounded-lg p-6">
                       <h4 className="font-semibold text-foreground mb-3 flex items-center space-x-2">
-                        <MapPin className="h-5 w-5 text-brand-blue" />
+                        <MapPin className="h-5 w-5 text-brand-green" />
                         <span>Endereço</span>
                       </h4>
                       <p className="text-muted-foreground">
@@ -179,14 +181,13 @@ const About = () => {
                       <p className="text-muted-foreground mb-3">
                         📲 Agende sua consulta agora mesmo pelo WhatsApp:
                       </p>
-                      <a 
-                        href="https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                      <Button
+                        variant="gradient"
+                        size="sm"
+                        onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse.', '_blank')}
                       >
                         👉 (84) 99448-2552
-                      </a>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -200,8 +201,9 @@ const About = () => {
       <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Nossas <span className="text-brand-blue">Especialidades</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 relative inline-block group">
+              Nossas <span className="text-brand-green">Especialidades</span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-[#60A4A3] transition-all duration-500 group-hover:w-full"></span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Cuidado especializado em diversas áreas da saúde
@@ -230,8 +232,9 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Por que escolher a <span className="text-brand-blue">Clínica Viverse?</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 relative inline-block group">
+              Por que escolher a <span className="text-brand-green">Clínica Viverse?</span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-[#60A4A3] transition-all duration-500 group-hover:w-full"></span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               ✨ Clínica Viverse – Saúde para Todos com qualidade e confiança.
@@ -242,8 +245,8 @@ const About = () => {
             {whyChoose.map((item, index) => (
               <Card key={index} className="p-6 text-center border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-background">
                 <div className="space-y-4">
-                  <div className="mx-auto w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center">
-                    <item.icon className="h-8 w-8 text-brand-blue" />
+                  <div className="mx-auto w-16 h-16 bg-brand-green/10 rounded-full flex items-center justify-center">
+                    <item.icon className="h-8 w-8 text-brand-green" />
                   </div>
                   <h3 className="text-lg font-bold text-foreground">
                     {item.title}
@@ -257,14 +260,14 @@ const About = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <a 
-              href="https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            <Button
+              variant="gradient"
+              size="lg"
+              className="px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse.', '_blank')}
             >
               📲 Agendar Consulta pelo WhatsApp
-            </a>
+            </Button>
           </div>
         </div>
       </section>

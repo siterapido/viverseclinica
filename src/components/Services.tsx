@@ -50,7 +50,7 @@ const Services = () => {
             <span className="text-2xl">🍃</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Nossas <span className="text-brand-blue">Especialidades</span>
+            Nossas <span className="text-brand-green">Especialidades</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Cuidado especializado em diversas áreas da saúde com profissionais qualificados e preços acessíveis.
@@ -59,13 +59,13 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border/50 hover:border-brand-blue/30 bg-background">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border/50 hover:border-brand-green/30 bg-background">
               <CardHeader className="text-center space-y-4">
                 <div className="text-5xl mx-auto">
                   {service.emoji}
                 </div>
                 <CardTitle className="text-xl font-bold text-foreground">
-                  <span className="text-brand-blue">{service.icon}</span> {service.title}
+                  <span className="text-brand-green">{service.icon}</span> {service.title}
                 </CardTitle>
               </CardHeader>
               
@@ -77,15 +77,15 @@ const Services = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-brand-blue rounded-full flex-shrink-0 mt-1.5"></div>
+                      <div className="w-2 h-2 bg-brand-accent rounded-full flex-shrink-0 mt-1.5"></div>
                       <span className="text-sm text-muted-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-brand-blue group-hover:text-brand-blue-foreground group-hover:border-brand-blue transition-all"
+                  variant="gradient" 
+                  className="w-full"
                   onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta de ' + service.title + ' na Clínica Viverse.', '_blank')}
                 >
                   📲 Agendar Consulta
@@ -116,8 +116,9 @@ const Services = () => {
                   className="inline-block w-full"
                 >
                   <Button 
+                    variant="gradient"
                     size="lg"
-                    className="bg-green-500 hover:bg-green-600 text-white rounded-lg px-8 py-6 text-xl font-semibold transition-all transform hover:scale-105 shadow-lg w-full"
+                    className="px-8 py-6 text-xl w-full"
                   >
                     👉 (84) 99448-2552
                   </Button>
@@ -138,26 +139,26 @@ const Services = () => {
 
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-green-500 text-2xl mb-2">✔</div>
+              <div className="text-brand-accent text-2xl mb-2">✔</div>
               <p className="text-sm font-medium">Atendimento rápido e acessível</p>
             </div>
             <div className="text-center">
-              <div className="text-green-500 text-2xl mb-2">✔</div>
+              <div className="text-brand-accent text-2xl mb-2">✔</div>
               <p className="text-sm font-medium">Estrutura confortável e moderna</p>
             </div>
             <div className="text-center">
-              <div className="text-green-500 text-2xl mb-2">✔</div>
+              <div className="text-brand-accent text-2xl mb-2">✔</div>
               <p className="text-sm font-medium">Profissionais qualificados</p>
             </div>
             <div className="text-center">
-              <div className="text-green-500 text-2xl mb-2">✔</div>
+              <div className="text-brand-accent text-2xl mb-2">✔</div>
               <p className="text-sm font-medium">Localização de fácil acesso</p>
             </div>
           </div>
 
           <div className="mt-8">
             <p className="text-lg font-medium text-foreground">
-              ✨ <span className="text-brand-blue">Clínica Viverse</span> – Saúde para Todos com qualidade e confiança.
+              ✨ <span className="text-brand-green">Clínica Viverse</span> – Saúde para Todos com qualidade e confiança.
             </p>
           </div>
         </div>

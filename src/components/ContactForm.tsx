@@ -99,7 +99,7 @@ const ContactForm = () => {
                   <Textarea placeholder="Descreva suas necessidades ou tire suas dúvidas..." rows={4} />
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-blue/80 hover:from-brand-blue/90 hover:to-brand-blue/70 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 border border-brand-blue/20">
+                <Button variant="gradient" className="w-full py-4">
                   Solicitar Cotação Gratuita
                 </Button>
 

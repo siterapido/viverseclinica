@@ -143,11 +143,8 @@ const PlansTable = () => {
                 </ul>
 
                 <Button 
-                  className={`w-full ${
-                    plan.highlight 
-                      ? "bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground" 
-                      : "bg-primary hover:bg-primary/90 text-primary-foreground"
-                  }`}
+                  variant="gradient"
+                  className="w-full"
                 >
                   Solicitar Cotação
                 </Button>

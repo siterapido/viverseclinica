@@ -170,15 +170,16 @@ const WhyChooseUs = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
+                variant="gradient"
                 size="lg"
-                className="bg-brand-blue hover:bg-brand-blue/90 text-brand-blue-foreground px-8 transition-all"
+                className="px-8"
               >
                 Falar com Consultor
               </Button>
               <Button 
+                variant="gradient"
                 size="lg"
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 transition-all"
+                className="px-8"
               >
                 Solicitar Cotação
               </Button>

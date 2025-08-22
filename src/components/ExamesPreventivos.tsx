@@ -1,191 +1,160 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Activity, Heart, FileText, Calendar } from "lucide-react";
+import { CreditCard, Calendar, Shield, CheckCircle } from "lucide-react";
 
 const ExamesPreventivos = () => {
-  const exames = [
+  const convenios = [
     {
-      icon: "📊",
-      iconComponent: Activity,
-      title: "Ultrassonografias",
-      description: "Exames de imagem não invasivos para diagnóstico preciso.",
-      details: ["Ultrassom abdominal", "Obstétrico", "Pélvico", "Doppler"]
+      icon: Shield,
+      title: "Unimed",
+      description: "Atendimento completo para beneficiários",
+      status: "Aceito"
     },
     {
-      icon: "💼",
-      iconComponent: FileText,
-      title: "Avaliações Ocupacionais",
-      description: "Exames médicos para empresas e trabalhadores.",
-      details: ["Admissionais", "Periódicos", "ASO", "Retorno ao trabalho"]
+      icon: Shield,
+      title: "Bradesco Saúde",
+      description: "Cobertura para consultas e exames",
+      status: "Aceito"
     },
     {
-      icon: "🔬",
-      iconComponent: Heart,
-      title: "Exames Laboratoriais",
-      subtitle: "(em breve)",
-      description: "Análises clínicas completas para diagnóstico e prevenção.",
-      details: ["Hemograma", "Bioquímica", "Hormônios", "Marcadores"],
-      coming: true
+      icon: Shield,
+      title: "SulAmérica",
+      description: "Rede credenciada completa",
+      status: "Aceito"
     },
     {
-      icon: "👩🏽‍⚕️",
-      iconComponent: Calendar,
-      title: "Acompanhamento Clínico",
-      description: "Consultas regulares para manutenção da sua saúde.",
-      details: ["Check-up geral", "Prevenção", "Seguimento", "Orientações"]
+      icon: Shield,
+      title: "Outros Convênios",
+      description: "Consulte disponibilidade",
+      status: "Consultar"
+    }
+  ];
+
+  const formasPagamento = [
+    {
+      icon: CreditCard,
+      title: "Cartões de Crédito",
+      description: "Visa, Mastercard, Elo e American Express",
+      parcelamento: "Parcelamos em até 6x sem juros"
+    },
+    {
+      icon: CreditCard,
+      title: "Cartões de Débito",
+      description: "Todas as bandeiras aceitas",
+      parcelamento: "Pagamento à vista"
+    },
+    {
+      icon: Calendar,
+      title: "PIX",
+      description: "Pagamento instantâneo",
+      parcelamento: "Desconto de 5% para pagamento via PIX"
+    },
+    {
+      icon: Calendar,
+      title: "Dinheiro",
+      description: "Pagamento em espécie",
+      parcelamento: "Desconto de 5% para pagamento à vista"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-primary/10 to-white relative overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
-      
-      <div className="container mx-auto px-4 relative">
+    <section className="py-24 bg-gray-50">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            <span className="text-primary">Exames</span> e Cuidados <span className="text-primary">Preventivos</span>
+          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 relative inline-block group">
+            <span className="font-medium text-primary">Convênios</span> e Formas de Pagamento
+            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-[#60A4A3] transition-all duration-500 group-hover:w-full"></span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Oferecemos uma gama completa de exames e serviços preventivos para 
-            cuidar da sua saúde de forma integral e proativa.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Facilitamos o acesso à saúde com diversas opções de pagamento
           </p>
         </div>
 
-        {/* Exames Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {exames.map((exame, index) => (
-            <Card 
-              key={index} 
-              className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-border/50 bg-white/80 backdrop-blur-sm ${
-                exame.coming ? 'opacity-80' : 'hover:border-primary/30'
-              }`}
-            >
-              <CardContent className="p-6 text-center space-y-4">
-                {/* Icon */}
-                <div className="relative">
-                  <div className={`text-5xl mb-2 ${exame.coming ? 'grayscale' : 'group-hover:scale-110'} transition-all duration-300`}>
-                    {exame.icon}
+        {/* Convênios Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-light text-foreground mb-8 text-center">
+            Convênios <span className="font-medium text-[#60A4A3]">Aceitos</span>
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {convenios.map((convenio, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-[#60A4A3]/10 rounded-lg">
+                    <convenio.icon className="h-6 w-6 text-[#60A4A3]" />
                   </div>
-                  {exame.coming && (
-                    <div className="absolute -top-2 -right-2 bg-brand-green text-brand-green-foreground text-xs px-2 py-1 rounded-full font-medium">
-                      Em breve
-                    </div>
-                  )}
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground mb-1">{convenio.title}</h4>
+                    <p className="text-sm text-muted-foreground mb-2">{convenio.description}</p>
+                    <span className={`inline-block px-2 py-1 text-xs rounded-full ${
+                      convenio.status === 'Aceito' 
+                        ? 'bg-green-100 text-green-700' 
+                        : 'bg-yellow-100 text-yellow-700'
+                    }`}>
+                      {convenio.status}
+                    </span>
+                  </div>
                 </div>
-                
-                {/* Title */}
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-1">
-                    {exame.title}
-                  </h3>
-                  {exame.subtitle && (
-                    <p className="text-sm text-brand-green font-medium">{exame.subtitle}</p>
-                  )}
-                </div>
-                
-                {/* Description */}
-                <p className="text-muted-foreground text-sm">
-                  {exame.description}
-                </p>
-                
-                {/* Details list */}
-                <ul className="space-y-2">
-                  {exame.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center space-x-2 text-sm">
-                      <CheckCircle className={`h-4 w-4 flex-shrink-0 ${exame.coming ? 'text-muted-foreground' : 'text-primary'}`} />
-                      <span className="text-muted-foreground">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                {/* Action Button */}
-                {!exame.coming && (
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all"
-                    onClick={() => window.open(`https://wa.me/5584994482552?text=Olá! Gostaria de agendar ${exame.title.toLowerCase()} na Clínica Viverse.`, '_blank')}
-                  >
-                    📅 Agendar
-                  </Button>
-                )}
-                
-                {exame.coming && (
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
-                    className="w-full cursor-not-allowed opacity-50"
-                    disabled
-                  >
-                    🔔 Notificar quando disponível
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Benefits section */}
-        <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Por que escolher nossos <span className="text-primary">cuidados preventivos?</span>
-            </h3>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
-                <CheckCircle className="h-8 w-8 text-primary" />
+        {/* Formas de Pagamento Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-light text-foreground mb-8 text-center">
+            Formas de <span className="font-medium text-[#60A4A3]">Pagamento</span>
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {formasPagamento.map((forma, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-[#60A4A3]/10 rounded-lg">
+                    <forma.icon className="h-6 w-6 text-[#60A4A3]" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground mb-2">{forma.title}</h4>
+                    <p className="text-sm text-muted-foreground mb-3">{forma.description}</p>
+                    <div className="flex items-center text-sm text-[#60A4A3] font-medium">
+                      <CheckCircle className="h-4 w-4 mr-2" />
+                      {forma.parcelamento}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 className="font-semibold text-foreground">Detecção Precoce</h4>
-              <p className="text-sm text-muted-foreground">
-                Identificamos problemas de saúde antes que se tornem graves, 
-                aumentando as chances de tratamento bem-sucedido.
-              </p>
-            </div>
-            
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
-                <Activity className="h-8 w-8 text-primary" />
-              </div>
-              <h4 className="font-semibold text-foreground">Equipamentos Modernos</h4>
-              <p className="text-sm text-muted-foreground">
-                Utilizamos tecnologia de ponta para garantir resultados 
-                precisos e confiáveis em todos os nossos exames.
-              </p>
-            </div>
-            
-            <div className="text-center space-y-3">
-              <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
-                <Heart className="h-8 w-8 text-primary" />
-              </div>
-              <h4 className="font-semibold text-foreground">Cuidado Integral</h4>
-              <p className="text-sm text-muted-foreground">
-                Acompanhamento completo da sua saúde com profissionais 
-                qualificados e atendimento humanizado.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary/20 to-brand-green/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Cuide da sua saúde preventivamente
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Agende seus exames e consultas de acompanhamento. A prevenção é o melhor remédio!
-            </p>
+        <div className="text-center bg-white rounded-3xl py-12 px-8 shadow-sm">
+          <h3 className="text-2xl font-light text-foreground mb-4">
+            Valores acessíveis para <span className="font-medium text-[#60A4A3]">sua saúde</span>
+          </h3>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Consulte-nos sobre condições especiais e descontos para pagamento à vista.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
+              variant="gradient"
               size="lg"
-              className="bg-brand-green hover:bg-brand-green/90 text-brand-green-foreground font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar exames preventivos na Clínica Viverse.', '_blank')}
+              className="px-8 py-3"
+              onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de saber sobre convênios e formas de pagamento na Clínica Viverse.', '_blank')}
             >
-              📲 Agendar Exames → (84) 99448-2552
+              Consultar Valores
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg"
+              className="px-8 py-3 border-[#60A4A3] text-[#60A4A3] hover:bg-[#60A4A3] hover:text-white"
+              onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de verificar se meu convênio é aceito na Clínica Viverse.', '_blank')}
+            >
+              Verificar Convênio
             </Button>
           </div>
         </div>

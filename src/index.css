@@ -17,21 +17,30 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Clínica Viverse Brand Colors - New Palette */
-    --primary: 180 20% 40%;  /* #60A4A3 - Verde água */
+    /* Clínica Viverse Brand Colors - Updated Palette */
+    --primary: 179 27% 51%;  /* #5FA4A3 - Teal */
     --primary-foreground: 0 0% 100%;
 
-    --brand-blue: 180 20% 40%;  /* #60A4A3 - Verde água */
+    --brand-blue: 179 27% 51%;  /* #5FA4A3 - Teal */
     --brand-blue-foreground: 0 0% 100%;
 
-    --brand-green: 70 40% 65%;  /* #C2D86C - Verde claro */
-    --brand-green-foreground: 0 0% 0%;
+    --brand-green: 180 27% 52%;  /* #60A4A3 - Main teal highlight color */
+    --brand-green-foreground: 0 0% 100%;
+    
+    --brand-accent: 73 57% 64%;  /* #C2D86C - Light lime green for small details */
+    --brand-accent-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --brand-light-green: 73 53% 82%;  /* #ECECB3 - Very light yellow-green */
+    --brand-light-green-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --brand-light-teal: 170 32% 78%;  /* #B6DBD3 - Light teal */
+    --brand-light-teal-foreground: 0 0% 0%;
+
+    --secondary: 170 32% 78%;  /* Light teal */
+    --secondary-foreground: 179 27% 20%;
+
+    --muted: 73 53% 82%;  /* Very light yellow-green */
+    --muted-foreground: 179 27% 35%;
 
     --accent: 197 95% 46%;  /* Using brand blue as accent */
     --accent-foreground: 0 0% 100%;
@@ -111,5 +120,24 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-stroke-2 {
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+  }
+  
+  .text-stroke-black {
+    -webkit-text-stroke-color: black;
+    text-stroke-color: black;
+  }
+  
+  .hero-text-shadow {
+    text-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.8),
+      0 4px 8px rgba(0, 0, 0, 0.6),
+      0 8px 16px rgba(0, 0, 0, 0.4);
   }
 }
