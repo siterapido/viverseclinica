@@ -35,13 +35,14 @@ const Hero = () => {
         ></div>
       ))}
       
-      {/* Enhanced overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/60"></div>
+      {/* Gradient overlay with better image visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/50 to-white/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent"></div>
       
       <div className="container mx-auto px-4 relative z-10 flex items-center justify-center min-h-[calc(100vh-5rem)]">
         <div className="max-w-3xl w-full text-center">
           {/* Minimalist content */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 leading-tight mb-6 mx-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 leading-tight mb-6 mx-auto drop-shadow-lg">
             Cuidando da sua
             <span className="block font-normal text-[#5FA4A3] relative inline-block group">
               saúde com carinho
@@ -49,7 +50,7 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light mb-8 md:mb-12 max-w-2xl mx-auto px-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-light mb-8 md:mb-12 max-w-2xl mx-auto px-4 drop-shadow-md">
             Atendimento humanizado e preços acessíveis em Nova Parnamirim
           </p>
           
