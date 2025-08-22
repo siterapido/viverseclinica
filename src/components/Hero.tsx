@@ -35,22 +35,22 @@ const Hero = () => {
         ></div>
       ))}
       
-      {/* Gradient overlay with better image visibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/50 to-white/70"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent"></div>
+      {/* Gradient overlay based on #60A4A3 */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#60A4A3]/80 via-[#60A4A3]/70 to-[#5FA4A3]/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       
       <div className="container mx-auto px-4 relative z-10 flex items-center justify-center min-h-[calc(100vh-5rem)]">
         <div className="max-w-3xl w-full text-center">
           {/* Minimalist content */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 leading-tight mb-6 mx-auto drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight mb-6 mx-auto drop-shadow-2xl">
             Cuidando da sua
-            <span className="block font-normal text-[#5FA4A3] relative inline-block group">
+            <span className="block font-normal text-[#C2D86C] relative inline-block group">
               saúde com carinho
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-[#60A4A3] transition-all duration-500 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-white transition-all duration-500 group-hover:w-full"></span>
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-light mb-8 md:mb-12 max-w-2xl mx-auto px-4 drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-light mb-8 md:mb-12 max-w-2xl mx-auto px-4 drop-shadow-xl">
             Atendimento humanizado e preços acessíveis em Nova Parnamirim
           </p>
           
@@ -69,7 +69,7 @@ const Hero = () => {
             <Button 
               variant="minimal-outline"
               size="lg"
-              className="px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg bg-[#60A4A3] hover:bg-[#558F8E] border-[#60A4A3] text-white w-full sm:w-auto"
+              className="px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg bg-white hover:bg-gray-100 border-white text-[#60A4A3] w-full sm:w-auto"
               onClick={() => document.getElementById('especialidades')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Especialidades
@@ -80,16 +80,16 @@ const Hero = () => {
           {/* Minimalist trust indicators */}
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-12 md:mt-16">
             <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-light text-[#5FA4A3]">1000+</p>
-              <p className="text-xs sm:text-sm text-gray-600 uppercase tracking-widest">Pacientes</p>
+              <p className="text-2xl sm:text-3xl font-light text-white drop-shadow-lg">1000+</p>
+              <p className="text-xs sm:text-sm text-white/90 uppercase tracking-widest">Pacientes</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-light text-[#5FA4A3]">5</p>
-              <p className="text-xs sm:text-sm text-gray-600 uppercase tracking-widest">Especialidades</p>
+              <p className="text-2xl sm:text-3xl font-light text-white drop-shadow-lg">5</p>
+              <p className="text-xs sm:text-sm text-white/90 uppercase tracking-widest">Especialidades</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-light text-[#5FA4A3]">100%</p>
-              <p className="text-xs sm:text-sm text-gray-600 uppercase tracking-widest">Satisfação</p>
+              <p className="text-2xl sm:text-3xl font-light text-white drop-shadow-lg">100%</p>
+              <p className="text-xs sm:text-sm text-white/90 uppercase tracking-widest">Satisfação</p>
             </div>
           </div>
 
@@ -101,8 +101,8 @@ const Hero = () => {
                 onClick={() => setCurrentImageIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentImageIndex 
-                    ? 'w-8 bg-[#60A4A3]' 
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? 'w-8 bg-white' 
+                    : 'bg-white/50 hover:bg-white/70'
                 }`}
                 aria-label={`Ir para slide ${index + 1}`}
               />
