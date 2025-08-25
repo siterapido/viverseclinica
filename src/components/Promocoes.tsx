@@ -9,28 +9,32 @@ const Promocoes = () => {
         "Ginecologia",
         "Preventivo",
         "USG Transvaginal"
-      ]
+      ],
+      isPacote: true
     },
     {
       titulo: "Saúde Mental",
       itens: [
         "1 Psiquiatria Adulto",
         "10 Sessões de Psicologia"
-      ]
+      ],
+      isPacote: true
     },
     {
       titulo: "Emagrecimento",
       itens: [
         "Nutrologia",
         "4 Consultas Nutrição"
-      ]
+      ],
+      isPacote: true
     },
     {
       titulo: "Neurodesenvolvimento",
       itens: [
         "1 Neurologia Infantil",
         "Avaliação Neuropsicológica (8 sessões)"
-      ]
+      ],
+      isPacote: true
     },
     {
       titulo: "Melhor Idade",
@@ -38,20 +42,23 @@ const Promocoes = () => {
         "Geriatria",
         "Endocrinologia",
         "Nutrição"
-      ]
+      ],
+      isPacote: true
     },
     {
       titulo: "Saúde Vascular",
       itens: [
         "Angiologia",
         "USG Membros Inferiores c/ Doppler"
-      ]
+      ],
+      isPacote: true
     },
     {
       titulo: "Ultrassonografia",
       itens: [
         "30% de desconto"
-      ]
+      ],
+      isPacote: false
     }
   ];
 
@@ -78,9 +85,16 @@ const Promocoes = () => {
               onClick={() => window.open(`https://wa.me/5584994482552?text=Olá! Gostaria de saber mais sobre: ${promo.titulo}`, '_blank')}
             >
               <div className="space-y-4">
-                <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors">
-                  {promo.titulo}
-                </h3>
+                <div className="flex justify-between items-start">
+                  <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors">
+                    {promo.titulo}
+                  </h3>
+                  {promo.isPacote && (
+                    <span className="text-xs text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      6x sem juros
+                    </span>
+                  )}
+                </div>
                 <ul className="space-y-2">
                   {promo.itens.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-sm text-muted-foreground flex items-start">
