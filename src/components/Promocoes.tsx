@@ -50,8 +50,7 @@ const Promocoes = () => {
     {
       titulo: "Ultrassonografia",
       itens: [
-        "30% de desconto",
-        "Todos os tipos de ultrassom"
+        "30% de desconto"
       ]
     }
   ];
