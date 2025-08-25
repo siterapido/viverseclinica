@@ -4,24 +4,27 @@ import { ArrowRight } from "lucide-react";
 const Promocoes = () => {
   const promocoes = [
     {
-      titulo: "Check-up Completo",
-      descricao: "Consulta + exames básicos",
-      desconto: "-40%"
+      titulo: "Pacote Emagrecimento",
+      itens: [
+        "Consulta com Nutrólogo",
+        "Acompanhamento Nutricional",
+        "Plano Personalizado"
+      ]
     },
     {
-      titulo: "Primeira Consulta",
-      descricao: "Qualquer especialidade",
-      desconto: "-50%"
+      titulo: "Pacote Saúde Mental",
+      itens: [
+        "Consulta Psiquiátrica",
+        "Consulta em Psicologia"
+      ]
     },
     {
-      titulo: "Pacote Família",
-      descricao: "4 consultas mensais",
-      desconto: "Economia"
-    },
-    {
-      titulo: "Nutrição Trimestral",
-      descricao: "3 meses de acompanhamento",
-      desconto: "Promoção"
+      titulo: "Pacote Saúde da Mulher",
+      itens: [
+        "Consulta Ginecológica",
+        "Exame Preventivo",
+        "Ultrasson Transvaginal"
+      ]
     }
   ];
 
@@ -39,26 +42,26 @@ const Promocoes = () => {
           </p>
         </div>
 
-        {/* Ultra Minimal Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {/* Healthcare Packages Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {promocoes.map((promo, index) => (
             <div
               key={index}
-              className="group cursor-pointer"
+              className="group cursor-pointer bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
               onClick={() => window.open(`https://wa.me/5584994482552?text=Olá! Gostaria de saber mais sobre: ${promo.titulo}`, '_blank')}
             >
-              <div className="space-y-2 pb-4 border-b border-gray-100 group-hover:border-primary/30 transition-colors duration-300">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-base font-medium text-foreground group-hover:text-primary transition-colors">
-                    {promo.titulo}
-                  </h3>
-                  <span className="text-xs text-primary">
-                    {promo.desconto}
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  {promo.descricao}
-                </p>
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors">
+                  {promo.titulo}
+                </h3>
+                <ul className="space-y-2">
+                  {promo.itens.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-sm text-muted-foreground flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
