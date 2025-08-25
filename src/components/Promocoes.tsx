@@ -4,26 +4,47 @@ import { ArrowRight } from "lucide-react";
 const Promocoes = () => {
   const promocoes = [
     {
-      titulo: "Pacote Emagrecimento",
+      titulo: "Saúde da Mulher",
       itens: [
-        "Consulta com Nutrólogo",
-        "Acompanhamento Nutricional",
-        "Plano Personalizado"
+        "Ginecologia",
+        "Preventivo",
+        "USG Transvaginal"
       ]
     },
     {
-      titulo: "Pacote Saúde Mental",
+      titulo: "Saúde Mental",
       itens: [
-        "Consulta Psiquiátrica",
-        "Consulta em Psicologia"
+        "1 Psiquiatria Adulto",
+        "10 Sessões de Psicologia"
       ]
     },
     {
-      titulo: "Pacote Saúde da Mulher",
+      titulo: "Emagrecimento",
       itens: [
-        "Consulta Ginecológica",
-        "Exame Preventivo",
-        "Ultrasson Transvaginal"
+        "Nutrologia",
+        "4 Consultas Nutrição"
+      ]
+    },
+    {
+      titulo: "Neurodesenvolvimento",
+      itens: [
+        "1 Neurologia Infantil",
+        "Avaliação Neuropsicológica (8 sessões)"
+      ]
+    },
+    {
+      titulo: "Melhor Idade",
+      itens: [
+        "Geriatria",
+        "Endocrinologia",
+        "Nutrição"
+      ]
+    },
+    {
+      titulo: "Saúde Vascular",
+      itens: [
+        "Angiologia",
+        "USG Membros Inferiores c/ Doppler"
       ]
     }
   ];
