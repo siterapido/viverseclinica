@@ -64,26 +64,6 @@ const Promocoes = () => {
           ))}
         </div>
 
-        {/* Minimal PIX Discount Banner */}
-        <div className="bg-gray-50 rounded-2xl p-8 md:p-12 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-light text-foreground mb-4">
-              <span className="font-medium text-primary">10% de desconto</span> no pagamento via PIX
-            </h3>
-            <p className="text-muted-foreground mb-8">
-              Parcelamento em até 12x também disponível para sua comodidade
-            </p>
-            <Button
-              variant="gradient"
-              size="lg"
-              className="px-8"
-              onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de saber mais sobre o desconto via PIX.', '_blank')}
-            >
-              Aproveitar Desconto
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
 
         {/* Terms */}
         <p className="text-center text-xs text-muted-foreground mt-8">
