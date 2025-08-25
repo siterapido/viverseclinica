@@ -6,25 +6,21 @@ const Promocoes = () => {
     {
       titulo: "Check-up Completo",
       descricao: "Consulta + exames básicos",
-      preco: "R$ 150",
       desconto: "-40%"
     },
     {
       titulo: "Primeira Consulta",
       descricao: "Qualquer especialidade",
-      preco: "R$ 75",
       desconto: "-50%"
     },
     {
       titulo: "Pacote Família",
       descricao: "4 consultas mensais",
-      preco: "R$ 400/mês",
       desconto: "Economia"
     },
     {
       titulo: "Nutrição Trimestral",
       descricao: "3 meses de acompanhamento",
-      preco: "12x R$ 89",
       desconto: "Promoção"
     }
   ];
@@ -62,9 +58,6 @@ const Promocoes = () => {
                 </div>
                 <p className="text-sm text-muted-foreground">
                   {promo.descricao}
-                </p>
-                <p className="text-xl font-light text-foreground pt-1">
-                  {promo.preco}
                 </p>
               </div>
             </div>
