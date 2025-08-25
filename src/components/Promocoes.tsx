@@ -46,6 +46,13 @@ const Promocoes = () => {
         "Angiologia",
         "USG Membros Inferiores c/ Doppler"
       ]
+    },
+    {
+      titulo: "Ultrassonografia",
+      itens: [
+        "30% de desconto",
+        "Todos os tipos de ultrassom"
+      ]
     }
   ];
 
