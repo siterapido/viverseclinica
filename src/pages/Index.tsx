@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Especialidades from "@/components/Especialidades";
-import ExamesPreventivos from "@/components/ExamesPreventivos";
+import Servicos from "@/components/Servicos";
+import Promocoes from "@/components/Promocoes";
 import Diferenciais from "@/components/Diferenciais";
 import Depoimentos from "@/components/Depoimentos";
 import Localizacao from "@/components/Localizacao";
@@ -15,17 +15,17 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <section id="especialidades">
-          <Especialidades />
+        <section id="servicos">
+          <Servicos />
+        </section>
+        <section id="promocoes">
+          <Promocoes />
         </section>
         <section id="diferenciais">
           <Diferenciais />
         </section>
         <section id="depoimentos">
           <Depoimentos />
-        </section>
-        <section id="convenios">
-          <ExamesPreventivos />
         </section>
         <section id="localizacao">
           <Localizacao />

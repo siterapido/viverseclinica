@@ -7,32 +7,39 @@ const Depoimentos = () => {
 
   const testimonials = [
     {
-      text: "Atendimento humanizado com preços acessíveis. Finalmente encontrei uma clínica que realmente se preocupa com o paciente.",
-      author: "Maria Silva",
-      role: "Professora",
+      text: "Local agradável, com médicos excelentes!! Atendimento bom, com pessoas simpáticas.",
+      author: "Josi Silva",
+      role: "Avaliação Google",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=faces"
     },
     {
-      text: "Excelente estrutura e profissionais qualificados. O atendimento pediátrico para minha filha foi excepcional.",
-      author: "João Santos",
-      role: "Engenheiro",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces"
-    },
-    {
-      text: "Consultas rápidas e precisas. O dermatologista foi muito atencioso e o preço muito acessível.",
-      author: "Ana Oliveira",
-      role: "Administradora",
+      text: "Atendimento humanizado e de qualidade. Profissionais capacitados e ambiente acolhedor.",
+      author: "Renata Costa",
+      role: "Avaliação Google",
       rating: 5,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=faces"
     },
     {
-      text: "Localização perfeita no AR Mall e atendimento de qualidade. A ultrassonografia foi rápida e precisa.",
-      author: "Carlos Medeiros",
-      role: "Comerciante",
+      text: "Excelente clínica! Equipe muito atenciosa e preços justos. Recomendo!",
+      author: "Paulo Henrique",
+      role: "Avaliação Google",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces"
+    },
+    {
+      text: "Ótimo atendimento, médicos competentes e ambiente muito limpo e organizado.",
+      author: "Ana Paula",
+      role: "Avaliação Google",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=faces"
+    },
+    {
+      text: "Fui muito bem atendida! Médicos atenciosos e estrutura excelente.",
+      author: "Carla Souza",
+      role: "Avaliação Google",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=faces"
     }
   ];
 

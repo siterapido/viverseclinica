@@ -30,9 +30,9 @@ const Diferenciais = () => {
     "Atendimento humanizado e personalizado",
     "Diagnósticos precisos com tecnologia",
     "Agendamento fácil via WhatsApp",
-    "Estacionamento gratuito disponível",
     "Ambiente climatizado e confortável",
-    "Resultados rápidos de exames"
+    "Resultados rápidos de exames",
+    "Equipe multidisciplinar especializada"
   ];
 
   return (
@@ -106,25 +106,6 @@ const Diferenciais = () => {
           </div>
         </div>
 
-        {/* Elegant Statistics */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-5xl font-thin text-brand-green mb-2">1000+</div>
-            <div className="text-sm text-muted-foreground uppercase tracking-widest">Pacientes</div>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-thin text-brand-green mb-2">5</div>
-            <div className="text-sm text-muted-foreground uppercase tracking-widest">Especialidades</div>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-thin text-brand-green mb-2">100%</div>
-            <div className="text-sm text-muted-foreground uppercase tracking-widest">Satisfação</div>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl font-thin text-brand-green mb-2">24h</div>
-            <div className="text-sm text-muted-foreground uppercase tracking-widest">WhatsApp</div>
-          </div>
-        </div>
       </div>
     </section>
   );

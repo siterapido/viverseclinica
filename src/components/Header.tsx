@@ -49,10 +49,10 @@ const Header = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              to="/especialidades" 
+              to="/servicos" 
               className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
             >
-              Especialidades
+              Serviços
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
@@ -132,7 +132,7 @@ const Header = () => {
           />
           
           {/* Mobile Menu */}
-          <div className="fixed top-16 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/10 shadow-xl z-50 lg:hidden">
+          <div className="fixed top-16 left-0 right-0 bg-white border-b border-border/10 shadow-xl z-50 lg:hidden">
             <nav className="container mx-auto px-4 py-8">
               <div className="space-y-1">
                 <Link 
@@ -144,11 +144,11 @@ const Header = () => {
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
                 </Link>
                 <Link 
-                  to="/especialidades" 
+                  to="/servicos" 
                   onClick={closeMobileMenu}
                   className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
                 >
-                  Especialidades
+                  Serviços
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
                 </Link>
                 <Link 

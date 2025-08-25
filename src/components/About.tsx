@@ -68,7 +68,7 @@ const About = () => {
     {
       icon: MapPin,
       title: "Localização de Fácil Acesso",
-      description: "Situada no AR Mall com estacionamento gratuito."
+      description: "Situada no AR Mall em Nova Parnamirim."
     }
   ];
 

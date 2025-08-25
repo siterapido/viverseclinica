@@ -118,8 +118,27 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Ensure sections don't cause horizontal scroll */
+  section {
+    overflow-x: hidden;
+  }
+
+  /* Fix for mobile menu stability */
+  .fixed {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 }
 

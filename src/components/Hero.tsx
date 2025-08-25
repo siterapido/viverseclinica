@@ -70,28 +70,13 @@ const Hero = () => {
               variant="minimal-outline"
               size="lg"
               className="px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg bg-white hover:bg-gray-100 border-white text-[#60A4A3] w-full sm:w-auto"
-              onClick={() => document.getElementById('especialidades')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Especialidades
+              Nossos Serviços
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
           
-          {/* Minimalist trust indicators */}
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-12 md:mt-16">
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-light text-white drop-shadow-lg">1000+</p>
-              <p className="text-xs sm:text-sm text-white/90 uppercase tracking-widest">Pacientes</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-light text-white drop-shadow-lg">5</p>
-              <p className="text-xs sm:text-sm text-white/90 uppercase tracking-widest">Especialidades</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-light text-white drop-shadow-lg">100%</p>
-              <p className="text-xs sm:text-sm text-white/90 uppercase tracking-widest">Satisfação</p>
-            </div>
-          </div>
 
           {/* Slide indicators - centered */}
           <div className="flex justify-center gap-2 mt-8 absolute bottom-8 left-0 right-0">

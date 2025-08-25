@@ -38,7 +38,7 @@ const ContactMap = () => {
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Como chegar</h4>
                     <p className="text-muted-foreground mb-3">
-                      Localizada no AR Mall em Nova Parnamirim, com estacionamento gratuito e fácil acesso pela Av. Abel Cabral.
+                      Localizada no AR Mall em Nova Parnamirim, com fácil acesso pela Av. Abel Cabral.
                     </p>
                     <Button 
                       variant="gradient" 
