@@ -51,7 +51,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-light mb-8 md:mb-12 max-w-2xl mx-auto px-4 drop-shadow-xl">
-            Atendimento humanizado e preços acessíveis em Nova Parnamirim
+            Tudo em um só lugar: atendimento humanizado e preços acessíveis em Nova Parnamirim
           </p>
           
           {/* Minimalist CTA Buttons */}

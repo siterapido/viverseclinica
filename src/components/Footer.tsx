@@ -93,7 +93,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Clock className="h-4 w-4 text-white/80" />
                 <div className="text-sm text-white/80">
-                  <p>Seg-Sex: 8h-18h</p>
+                  <p>Seg-Sex: 8h-17h</p>
                   <p>Sáb: 8h-12h</p>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="text-center">
             <h3 className="text-xl font-light mb-4">
-              Agende sua consulta agora
+              Agende sua consulta
             </h3>
             <Button 
               variant="gradient"

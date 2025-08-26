@@ -10,12 +10,12 @@ const Servicos = () => {
 
   const featuredServices = [
     {
-      image: "/Imagens/dermatologia.jpg",
-      title: "Dermatologia",
+      image: "/Imagens/neuropediatra.webp",
+      title: "Neuropediatria",
       category: "consulta",
-      description: "Cuidados especializados para sua pele com tecnologia avançada",
-      details: "Tratamento completo para doenças da pele, cabelos e unhas. Diagnóstico e tratamento de acne, manchas, alergias, micoses e câncer de pele.",
-      horarios: "Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h"
+      description: "Especialização em distúrbios neurológicos em crianças e adolescentes",
+      details: "Diagnóstico e tratamento de transtornos neurológicos infantis, epilepsia, TDAH, TEA, atrasos do desenvolvimento e distúrbios do sono.",
+      horarios: "Segunda a Sexta: 8h às 17h | Sábado: 8h às 12h"
     },
     {
       image: "/Imagens/ultrasonografia.jpg",
@@ -26,28 +26,28 @@ const Servicos = () => {
       horarios: "Segunda a Sexta: 7h às 19h | Sábado: 7h às 13h"
     },
     {
-      image: "/Imagens/medicina do trabalhi.jpg",
-      title: "Medicina do Trabalho",
-      category: "consulta",
-      description: "Soluções completas para saúde ocupacional",
-      details: "Exames admissionais, demissionais, periódicos, mudança de função e retorno ao trabalho. PCMSO, PPP e gestão completa de saúde ocupacional.",
+      image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&h=600&fit=crop",
+      title: "Exames Laboratoriais",
+      category: "exame",
+      description: "Análises clínicas completas para diagnóstico preciso",
+      details: "Hemograma, glicemia, colesterol, função hepática e renal, hormônios, marcadores tumorais, exames de urina e fezes. Resultados rápidos e confiáveis.",
       horarios: "Segunda a Sexta: 7h às 17h"
     },
     {
-      image: "/Imagens/closeup-de-um-apoio-de-maos.jpg",
-      title: "Clínico Geral",
+      image: "/Imagens/psiquiatra.jpg",
+      title: "Psiquiatria",
       category: "consulta",
-      description: "Atendimento humanizado para toda a família",
-      details: "Consultas para check-up, prevenção e tratamento de doenças comuns. Acompanhamento de doenças crônicas como diabetes e hipertensão.",
-      horarios: "Segunda a Sexta: 7h às 19h | Sábado: 8h às 12h"
+      description: "Cuidado especializado em saúde mental e bem-estar",
+      details: "Diagnóstico e tratamento de transtornos mentais, depressão, ansiedade, bipolaridade, esquizofrenia e outros distúrbios psiquiátricos. Acompanhamento psicofarmacológico.",
+      horarios: "Segunda a Sexta: 8h às 17h | Sábado: 8h às 12h"
     },
     {
-      image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop",
+      image: "/Imagens/pedriatria.jpg",
       title: "Pediatria",
       category: "consulta",
       description: "Cuidado completo para a saúde das crianças",
       details: "Acompanhamento do crescimento e desenvolvimento infantil, vacinação, tratamento de doenças da infância e orientação aos pais.",
-      horarios: "Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h"
+      horarios: "Segunda a Sexta: 8h às 17h | Sábado: 8h às 12h"
     }
   ];
 
@@ -141,7 +141,7 @@ const Servicos = () => {
                       title: consulta,
                       category: 'consulta',
                       details: `Consulta especializada em ${consulta} com profissionais qualificados e experientes.`,
-                      horarios: "Segunda a Sexta: 8h às 18h"
+                      horarios: "Segunda a Sexta: 8h às 17h"
                     })}
                     className="text-left p-3 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 group"
                   >

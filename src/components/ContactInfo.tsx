@@ -48,7 +48,7 @@ const ContactInfo = () => {
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Horário</h3>
             <p className="text-white/90">Segunda à Sexta</p>
-            <p className="text-white/90">8h às 18h</p>
+            <p className="text-white/90">8h às 17h</p>
           </div>
         </div>
       </div>

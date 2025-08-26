@@ -18,7 +18,7 @@ const CtaFinal = () => {
         <div className="text-center max-w-3xl mx-auto">
           {/* Main CTA Content */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6">
-            Agende sua consulta <span className="font-medium">agora mesmo</span>
+            Agende sua consulta
           </h2>
           
           <p className="text-xl text-white/90 mb-10">
@@ -36,7 +36,7 @@ const CtaFinal = () => {
           </Button>
           
           <p className="text-white/70 text-sm mt-6">
-            Resposta imediata • (84) 99448-2552
+            (84) 99448-2552
           </p>
         </div>
       </div>
