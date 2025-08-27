@@ -62,7 +62,7 @@ const Localizacao = () => {
                 <div>
                   <h3 className="font-medium text-foreground mb-2">Horário</h3>
                   <p className="text-sm text-muted-foreground">
-                    Segunda a Sexta: 8h às 18h<br/>
+                    Segunda a Sexta: 8h às 17h<br/>
                     Sábados: 8h às 12h<br/>
                     Domingos: Fechado
                   </p>

@@ -56,7 +56,7 @@ const ContactMap = () => {
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Segunda a Sexta:</span>
-                    <span className="text-foreground font-medium">8:00 - 18:00</span>
+                    <span className="text-foreground font-medium">8:00 - 17:00</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Sábado:</span>

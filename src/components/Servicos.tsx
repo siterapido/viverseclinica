@@ -23,7 +23,7 @@ const Servicos = () => {
       category: "exame",
       description: "Exames precisos com equipamentos de última geração",
       details: "Ultrassonografia abdominal, pélvica, obstétrica, morfológica, transvaginal e doppler. Resultados rápidos e laudos detalhados.",
-      horarios: "Segunda a Sexta: 7h às 19h | Sábado: 7h às 13h"
+      horarios: "Segunda a Sexta: 7h às 17h | Sábado: 7h às 13h"
     },
     {
       image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&h=600&fit=crop",
@@ -167,7 +167,7 @@ const Servicos = () => {
                       title: exame,
                       category: 'exame',
                       details: `${exame} com equipamentos modernos e resultados precisos.`,
-                      horarios: "Segunda a Sexta: 7h às 19h | Sábado: 7h às 13h"
+                      horarios: "Segunda a Sexta: 7h às 17h | Sábado: 7h às 13h"
                     })}
                     className="text-left p-3 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 group"
                   >
