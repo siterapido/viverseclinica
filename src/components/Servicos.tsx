@@ -120,88 +120,22 @@ const Servicos = () => {
           ))}
         </div>
 
-        {/* Promotions Section */}
-        <div className="mt-24 mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-              Promoções <span className="font-medium text-primary">Especiais</span>
+        {/* Promotions CTA */}
+        <div className="text-center mb-16">
+          <div className="bg-gradient-to-r from-[#60A4A3] to-[#C2D86C] rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-3">
+              💰 Promoções Especiais Disponíveis!
             </h3>
-            <p className="text-lg text-muted-foreground">
-              Ofertas por tempo limitado
+            <p className="text-white/90 mb-6">
+              Pacotes de saúde com desconto e parcelamento sem juros
             </p>
+            <button 
+              onClick={() => document.getElementById('promocoes')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-[#60A4A3] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Ver Promoções 🔥
+            </button>
           </div>
-
-          {/* Healthcare Packages Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                titulo: "Saúde da Mulher",
-                itens: ["Ginecologia", "Preventivo", "USG Transvaginal"],
-                isPacote: true
-              },
-              {
-                titulo: "Saúde Mental",
-                itens: ["1 Psiquiatria Adulto", "10 Sessões de Psicologia"],
-                isPacote: true
-              },
-              {
-                titulo: "Emagrecimento",
-                itens: ["Nutrologia", "4 Consultas Nutrição"],
-                isPacote: true
-              },
-              {
-                titulo: "Neurodesenvolvimento",
-                itens: ["1 Neurologia Infantil", "Avaliação Neuropsicológica (8 sessões)"],
-                isPacote: true
-              },
-              {
-                titulo: "Melhor Idade",
-                itens: ["Geriatria", "Endocrinologia", "Nutrição"],
-                isPacote: true
-              },
-              {
-                titulo: "Saúde Vascular",
-                itens: ["Angiologia", "USG Membros Inferiores c/ Doppler"],
-                isPacote: true
-              },
-              {
-                titulo: "Ultrassonografia",
-                itens: ["30% de desconto"],
-                isPacote: false
-              }
-            ].map((promo, index) => (
-              <div
-                key={index}
-                className="group cursor-pointer bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-all duration-300"
-                onClick={() => window.open(`https://wa.me/5584994482552?text=Olá! Gostaria de saber mais sobre: ${promo.titulo}`, '_blank')}
-              >
-                <div className="space-y-3">
-                  <div className="flex justify-between items-start">
-                    <h4 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {promo.titulo}
-                    </h4>
-                    {promo.isPacote && (
-                      <span className="text-xs text-primary bg-primary/10 px-2 py-1 rounded-full whitespace-nowrap">
-                        6x sem juros
-                      </span>
-                    )}
-                  </div>
-                  <ul className="space-y-1.5">
-                    {promo.itens.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-sm text-muted-foreground flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-center text-xs text-muted-foreground mt-6">
-            *Consulte condições no atendimento
-          </p>
         </div>
 
         {/* Complete Services List */}

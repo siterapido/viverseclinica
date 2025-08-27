@@ -77,8 +77,7 @@ const Localizacao = () => {
                 <div>
                   <h3 className="font-medium text-foreground mb-2">Contato</h3>
                   <p className="text-sm text-muted-foreground">
-                    WhatsApp: (84) 99448-2552<br/>
-                    Resposta imediata
+                    WhatsApp: (84) 99448-2552
                   </p>
                 </div>
               </div>
