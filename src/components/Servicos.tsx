@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Clock, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Servicos = () => {
   const [selectedService, setSelectedService] = useState(null);
@@ -207,14 +207,6 @@ const Servicos = () => {
             </DialogHeader>
             
             <div className="space-y-4 mt-6">
-              <div className="flex items-start space-x-3">
-                <Clock className="h-5 w-5 text-primary mt-0.5" />
-                <div>
-                  <p className="font-medium text-foreground">Horários Disponíveis</p>
-                  <p className="text-sm text-muted-foreground">{selectedService?.horarios}</p>
-                </div>
-              </div>
-              
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-primary mt-0.5" />
                 <div>
