@@ -90,6 +90,24 @@ const Servicos = () => {
           </p>
         </div>
 
+        {/* Promotions CTA */}
+        <div className="text-center mb-16">
+          <div className="bg-gradient-to-r from-[#60A4A3] to-[#C2D86C] rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-3">
+              💰 Promoções Especiais Disponíveis!
+            </h3>
+            <p className="text-white/90 mb-6">
+              Pacotes de saúde com desconto e parcelamento sem juros
+            </p>
+            <button 
+              onClick={() => document.getElementById('promocoes')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-[#60A4A3] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Ver Promoções 🔥
+            </button>
+          </div>
+        </div>
+
         {/* Featured Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
           {featuredServices.map((service, index) => (
@@ -118,24 +136,6 @@ const Servicos = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Promotions CTA */}
-        <div className="text-center mb-16">
-          <div className="bg-gradient-to-r from-[#60A4A3] to-[#C2D86C] rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-3">
-              💰 Promoções Especiais Disponíveis!
-            </h3>
-            <p className="text-white/90 mb-6">
-              Pacotes de saúde com desconto e parcelamento sem juros
-            </p>
-            <button 
-              onClick={() => document.getElementById('promocoes')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white text-[#60A4A3] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Ver Promoções 🔥
-            </button>
-          </div>
         </div>
 
         {/* Complete Services List */}
