@@ -79,17 +79,6 @@ const Servicos = () => {
   return (
     <section id="servicos" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        {/* Minimal Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 relative inline-block group">
-            Nossos <span className="font-medium text-primary">Serviços</span>
-            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-[#60A4A3] transition-all duration-500 group-hover:w-full"></span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cuidado especializado com profissionais qualificados
-          </p>
-        </div>
-
         {/* Promotions CTA */}
         <div className="text-center mb-16">
           <div className="bg-gradient-to-r from-[#60A4A3] to-[#C2D86C] rounded-2xl p-8 max-w-2xl mx-auto">
@@ -106,6 +95,17 @@ const Servicos = () => {
               Ver Promoções 🔥
             </button>
           </div>
+        </div>
+
+        {/* Minimal Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 relative inline-block group">
+            Nossos <span className="font-medium text-primary">Serviços</span>
+            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#C2D86C] to-[#60A4A3] transition-all duration-500 group-hover:w-full"></span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Cuidado especializado com profissionais qualificados
+          </p>
         </div>
 
         {/* Featured Services Grid */}

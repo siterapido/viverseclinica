@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,48 +40,54 @@ const Header = () => {
 
           {/* Minimalist Center Navigation Menu */}
           <nav className="hidden lg:flex items-center justify-center flex-1 space-x-6">
-            <Link 
-              to="/" 
-              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+            <a 
+              href="#" 
+              onClick={(e) => {e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'})}}
+              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Início
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              to="/servicos" 
-              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+            </a>
+            <a 
+              href="#servicos" 
+              onClick={(e) => {e.preventDefault(); document.getElementById('servicos')?.scrollIntoView({behavior: 'smooth'})}}
+              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Serviços
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              to="/exames" 
-              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+            </a>
+            <a 
+              href="#promocoes" 
+              onClick={(e) => {e.preventDefault(); document.getElementById('promocoes')?.scrollIntoView({behavior: 'smooth'})}}
+              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
-              Exames
+              Promoções
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              to="/diferenciais" 
-              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+            </a>
+            <a 
+              href="#diferenciais" 
+              onClick={(e) => {e.preventDefault(); document.getElementById('diferenciais')?.scrollIntoView({behavior: 'smooth'})}}
+              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Diferenciais
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              to="/depoimentos" 
-              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+            </a>
+            <a 
+              href="#depoimentos" 
+              onClick={(e) => {e.preventDefault(); document.getElementById('depoimentos')?.scrollIntoView({behavior: 'smooth'})}}
+              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Depoimentos
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              to="/contato" 
-              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+            </a>
+            <a 
+              href="#localizacao" 
+              onClick={(e) => {e.preventDefault(); document.getElementById('localizacao')?.scrollIntoView({behavior: 'smooth'})}}
+              className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Contato
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            </a>
           </nav>
 
           {/* Right Side - Phone and CTA */}
@@ -135,54 +140,54 @@ const Header = () => {
           <div className="fixed top-16 left-0 right-0 bg-white border-b border-border/10 shadow-xl z-50 lg:hidden">
             <nav className="container mx-auto px-4 py-8">
               <div className="space-y-1">
-                <Link 
-                  to="/" 
-                  onClick={closeMobileMenu}
-                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+                <a 
+                  href="#" 
+                  onClick={(e) => {e.preventDefault(); closeMobileMenu(); window.scrollTo({top: 0, behavior: 'smooth'})}}
+                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
                   Início
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </Link>
-                <Link 
-                  to="/servicos" 
-                  onClick={closeMobileMenu}
-                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+                </a>
+                <a 
+                  href="#servicos" 
+                  onClick={(e) => {e.preventDefault(); closeMobileMenu(); document.getElementById('servicos')?.scrollIntoView({behavior: 'smooth'})}}
+                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
                   Serviços
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </Link>
-                <Link 
-                  to="/exames" 
-                  onClick={closeMobileMenu}
-                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+                </a>
+                <a 
+                  href="#promocoes" 
+                  onClick={(e) => {e.preventDefault(); closeMobileMenu(); document.getElementById('promocoes')?.scrollIntoView({behavior: 'smooth'})}}
+                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
-                  Exames
+                  Promoções
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </Link>
-                <Link 
-                  to="/diferenciais" 
-                  onClick={closeMobileMenu}
-                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+                </a>
+                <a 
+                  href="#diferenciais" 
+                  onClick={(e) => {e.preventDefault(); closeMobileMenu(); document.getElementById('diferenciais')?.scrollIntoView({behavior: 'smooth'})}}
+                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
                   Diferenciais
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </Link>
-                <Link 
-                  to="/depoimentos" 
-                  onClick={closeMobileMenu}
-                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+                </a>
+                <a 
+                  href="#depoimentos" 
+                  onClick={(e) => {e.preventDefault(); closeMobileMenu(); document.getElementById('depoimentos')?.scrollIntoView({behavior: 'smooth'})}}
+                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
                   Depoimentos
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </Link>
-                <Link 
-                  to="/contato" 
-                  onClick={closeMobileMenu}
-                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group"
+                </a>
+                <a 
+                  href="#localizacao" 
+                  onClick={(e) => {e.preventDefault(); closeMobileMenu(); document.getElementById('localizacao')?.scrollIntoView({behavior: 'smooth'})}}
+                  className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
                   Contato
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </Link>
+                </a>
               </div>
               
               {/* Mobile Contact and CTA */}
