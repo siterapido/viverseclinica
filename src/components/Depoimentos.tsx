@@ -1,31 +1,6 @@
-import { useEffect } from "react";
-
-declare global {
-  interface Window {
-    elfsight?: {
-      initialize: () => void;
-    };
-  }
-}
+import React from "react";
 
 const Depoimentos = () => {
-  useEffect(() => {
-    // Carrega o script do Elfsight se ainda não estiver carregado
-    const script = document.createElement('script');
-    script.src = 'https://elfsightcdn.com/platform.js';
-    script.async = true;
-    
-    // Verifica se o script já foi adicionado
-    const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
-    if (!existingScript) {
-      document.body.appendChild(script);
-    }
-
-    // Force re-render of Elfsight widget
-    if (window.elfsight) {
-      window.elfsight.initialize();
-    }
-  }, []);
 
   return (
     <section className="py-24 bg-white">
@@ -43,7 +18,7 @@ const Depoimentos = () => {
 
         {/* Elfsight Google Reviews Widget */}
         <div className="max-w-6xl mx-auto">
-          <div className="elfsight-app-20f89c98-6480-46c3-9510-35f738f9062b" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-209d711b-629b-4bcf-a7ed-595d4cd85703" data-elfsight-app-lazy></div>
         </div>
       </div>
     </section>
