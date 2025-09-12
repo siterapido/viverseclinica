@@ -49,7 +49,7 @@ const Header = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a 
-              href="/quem-somos" 
+              href="/sobre-nos" 
               className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Quem Somos
@@ -156,7 +156,7 @@ const Header = () => {
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
                 </a>
                 <a 
-                  href="/quem-somos" 
+                  href="/sobre-nos" 
                   onClick={(e) => {closeMobileMenu();}}
                   className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
