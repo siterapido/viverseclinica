@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Depoimentos = () => {
+  useEffect(() => {
+    // Garantir que o script do Elfsight seja carregado
+    const script = document.createElement('script');
+    script.src = 'https://elfsightcdn.com/platform.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Cleanup
+    return () => {
+      const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
+      if (existingScript && existingScript !== script) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <section className="py-24 bg-white">
@@ -18,7 +33,7 @@ const Depoimentos = () => {
 
         {/* Elfsight Google Reviews Widget */}
         <div className="max-w-6xl mx-auto">
-          <div className="elfsight-app-209d711b-629b-4bcf-a7ed-595d4cd85703" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-a2dc2b59-f859-4da1-a2f5-50fae35a0b1a" data-elfsight-app-lazy></div>
         </div>
       </div>
     </section>
