@@ -18,7 +18,7 @@ const Depoimentos = () => {
 
         {/* Elfsight Google Reviews Widget */}
         <div className="max-w-6xl mx-auto">
-          <div className="elfsight-app-209d711b-629b-4bcf-a7ed-595d4cd85703" data-elfsight-app-lazy="false"></div>
+          <div className="elfsight-app-209d711b-629b-4bcf-a7ed-595d4cd85703" data-elfsight-app-lazy></div>
         </div>
       </div>
     </section>

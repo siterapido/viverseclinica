@@ -25,7 +25,7 @@
     <!-- End Google Tag Manager -->
     
     <!-- Elfsight Google Reviews Widget --> 
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://elfsightcdn.com/platform.js" async></script>
   </head>
 
   <body>
@@ -36,16 +36,6 @@
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Script para garantir que o widget do Elfsight seja carregado corretamente -->
-    <script>
-      window.onload = function() {
-        if (typeof EappsInstagram !== 'undefined') {
-          EappsInstagram.init();
-        }
-        if (typeof EappsReviews !== 'undefined') {
-          EappsReviews.init();
-        }
-      }
-    </script>
+
   </body>
 </html>
