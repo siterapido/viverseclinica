@@ -123,25 +123,25 @@ const Hero = () => {
                         className="group cursor-pointer bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                         onClick={() => window.open(`https://wa.me/5584994482552?text=Olá! Gostaria de saber mais sobre: ${promo.title}`, '_blank')}
                       >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-4">
-                            <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${promo.color} flex items-center justify-center shadow-lg`}>
+                        <div className="flex items-start justify-between">
+                          <div className="flex items-start space-x-4 flex-1">
+                            <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${promo.color} flex items-center justify-center shadow-lg flex-shrink-0`}>
                               <span className="text-white text-xl font-light">{promo.icon}</span>
                             </div>
-                            <div>
-                              <h4 className="text-white font-semibold text-lg group-hover:text-[#C2D86C] transition-colors">
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-white font-semibold text-lg group-hover:text-[#C2D86C] transition-colors leading-tight">
                                 {promo.title}
                               </h4>
-                              <p className="text-white/80 text-sm">
+                              <p className="text-white/80 text-sm mt-1 leading-relaxed">
                                 {promo.description}
                               </p>
                             </div>
                           </div>
-                          <div className="text-right">
-                            <span className="inline-block px-3 py-1 bg-[#C2D86C] text-[#2D5A59] text-sm font-bold rounded-full">
+                          <div className="flex flex-col items-end justify-center ml-4 flex-shrink-0">
+                            <span className="inline-block px-3 py-1 bg-[#C2D86C] text-[#2D5A59] text-sm font-bold rounded-full whitespace-nowrap">
                               {promo.highlight}
                             </span>
-                            <ArrowRight className="w-4 h-4 text-white/60 group-hover:text-[#C2D86C] mt-2 ml-auto transition-colors" />
+                            <ArrowRight className="w-4 h-4 text-white/60 group-hover:text-[#C2D86C] mt-2 transition-colors" />
                           </div>
                         </div>
                       </div>
