@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -48,13 +49,13 @@ const Header = () => {
               Início
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a 
-              href="/quem-somos" 
+            <Link 
+              to="/quem-somos" 
               className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Quem Somos
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
             <a 
               href="#servicos" 
               onClick={(e) => {e.preventDefault(); document.getElementById('servicos')?.scrollIntoView({behavior: 'smooth'})}}
@@ -155,14 +156,14 @@ const Header = () => {
                   Início
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
                 </a>
-                <a 
-                  href="/quem-somos" 
+                <Link 
+                  to="/quem-somos" 
                   onClick={(e) => {closeMobileMenu();}}
                   className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
                   Quem Somos
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </a>
+                </Link>
                 <a 
                   href="#servicos" 
                   onClick={(e) => {e.preventDefault(); closeMobileMenu(); document.getElementById('servicos')?.scrollIntoView({behavior: 'smooth'})}}
