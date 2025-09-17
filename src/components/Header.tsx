@@ -32,23 +32,24 @@ const Header = () => {
         <div className="flex items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/Id vidual/Viverse LOGO PNG fundo incolor 1.png" 
-              alt="Clínica Viverse" 
-              className="h-10 w-auto"
-            />
+            <Link to="/">
+              <img 
+                src="/Id vidual/Viverse LOGO PNG fundo incolor 1.png" 
+                alt="Clínica Viverse" 
+                className="h-10 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Minimalist Center Navigation Menu */}
           <nav className="hidden lg:flex items-center justify-center flex-1 space-x-6">
-            <a 
-              href="#" 
-              onClick={(e) => {e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'})}}
+            <Link 
+              to="/" 
               className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
             >
               Início
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
             <Link 
               to="/quem-somos" 
               className="text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
@@ -148,14 +149,14 @@ const Header = () => {
           <div className="fixed top-16 left-0 right-0 bg-white border-b border-border/10 shadow-xl z-50 lg:hidden">
             <nav className="container mx-auto px-4 py-8">
               <div className="space-y-1">
-                <a 
-                  href="#" 
-                  onClick={(e) => {e.preventDefault(); closeMobileMenu(); window.scrollTo({top: 0, behavior: 'smooth'})}}
+                <Link 
+                  to="/" 
+                  onClick={() => closeMobileMenu()}
                   className="block py-3 px-0 text-foreground/80 hover:text-brand-green transition-colors font-normal text-sm tracking-wide relative group cursor-pointer"
                 >
                   Início
                   <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all duration-300 group-hover:w-8"></span>
-                </a>
+                </Link>
                 <Link 
                   to="/quem-somos" 
                   onClick={(e) => {closeMobileMenu();}}
