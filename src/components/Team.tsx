@@ -90,12 +90,12 @@ const QuemSomos = () => {
       description: "Atualização contínua da equipe e serviços de alto padrão."
     },
     {
-      icon: Stethoscope,
+      icon: Target,
       title: "Integralidade",
       description: "Cuidado com a saúde física, mental e social."
     },
     {
-      icon: Heart,
+      icon: Eye,
       title: "Comunidade",
       description: "Valorização do vínculo com os pacientes e contribuição para o bem-estar coletivo."
     }
@@ -135,7 +135,7 @@ const QuemSomos = () => {
                   </h2>
                   
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Localizada em <span className="text-foreground font-medium">Nova Parnamirim</span>, somos uma clínica de especialidades médicas e multiprofissionais, oferecendo atendimento em várias especialidades médicas, psicologia, nutrição, entre outras.
+                    A Clínica Viverse nasceu com o propósito de tornar a saúde de qualidade acessível para todos. Localizada em <span className="text-foreground font-medium">Nova Parnamirim</span>, somos uma clínica de especialidades médicas e multiprofissionais, oferecendo atendimento em áreas várias especialidades médicas, psicologia, nutrição, entre outras.
                   </p>
                 </div>
 
@@ -150,8 +150,15 @@ const QuemSomos = () => {
                 </div>
               </div>
 
-              {/* Coluna de destaque */}
+              {/* Coluna de destaque - Imagem principal */}
               <div className="space-y-6">
+                <div className="rounded-xl overflow-hidden shadow-lg border border-brand-green/20">
+                  <img 
+                    src="/Imagens/Equipe/foto prinicipal quem somos.jpeg" 
+                    alt="Equipe Clínica Viverse" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
                 <Card className="p-8 bg-gradient-to-br from-brand-green/5 to-brand-accent/5 border-brand-green/20">
                   <div className="space-y-6">
                     <div className="flex items-center space-x-3">
@@ -162,7 +169,7 @@ const QuemSomos = () => {
                     </div>
                     
                     <p className="text-muted-foreground leading-relaxed">
-                      Cuidar de cada paciente com <span className="text-brand-green font-medium">atenção</span>, <span className="text-brand-green font-medium">respeito</span> e <span className="text-brand-green font-medium">ética</span>, oferecendo um atendimento humanizado e acessível.
+                      Nosso compromisso é cuidar de cada paciente com <span className="text-brand-green font-medium">atenção</span>, <span className="text-brand-green font-medium">respeito</span> e <span className="text-brand-green font-medium">ética</span>, oferecendo um atendimento humanizado e acessível para a população que busca cuidar da saúde sem abrir mão da qualidade.
                     </p>
                   </div>
                 </Card>
@@ -178,7 +185,7 @@ const QuemSomos = () => {
                     
                     <blockquote className="border-l-4 border-brand-green pl-4 italic">
                       <p className="text-lg text-foreground font-medium leading-relaxed">
-                        "Acreditamos que saúde é um direito de todos. Trabalhamos para que cada pessoa se sinta acolhida, confiante e bem cuidada."
+                        "Na Clínica Viverse, acreditamos que saúde é um direito de todos. Por isso, trabalhamos todos os dias para que cada pessoa que nos procura se sinta acolhida, confiante e bem cuidada."
                       </p>
                     </blockquote>
                   </div>
@@ -220,7 +227,7 @@ const QuemSomos = () => {
                    <span className="text-brand-green">Visão</span>
                  </h3>
                  <p className="text-muted-foreground leading-relaxed">
-                   Ser referência em saúde acessível na região, reconhecida pela qualidade dos serviços, pelo atendimento humanizado e pela promoção de uma vida mais saudável para a população.
+                   Ser referência em saúde acessível na região, reconhecida pela qualidade dos serviços, pelo atendimento humanizado e pela promoção de uma vida mais saudável para a população
                  </p>
                </div>
              </Card>
