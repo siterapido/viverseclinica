@@ -127,7 +127,7 @@ const QuemSomos = () => {
                   </div>
                   
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
-                    A <span className="text-brand-green">Clínica Viverse</span> nasceu com o propósito de 
+                    A <span className="text-brand-green">Clínica Viverse</span> nasceu com o propósito de
                     <span className="relative">
                       tornar a saúde acessível
                       <span className="absolute bottom-0 left-0 w-full h-1 bg-brand-accent/30 -z-10"></span>
@@ -135,7 +135,7 @@ const QuemSomos = () => {
                   </h2>
                   
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    A Clínica Viverse nasceu com o propósito de tornar a saúde de qualidade acessível para todos. Localizada em <span className="text-foreground font-medium">Nova Parnamirim</span>, somos uma clínica de especialidades médicas e multiprofissionais, oferecendo atendimento em áreas várias especialidades médicas, psicologia, nutrição, entre outras.
+                    A Clínica Viverse nasceu com o propósito detornar a saúde acessível. Localizada em <span className="text-foreground font-medium">Nova Parnamirim</span>, somos uma clínica de especialidades médicas e multiprofissionais, oferecendo atendimento em áreas várias especialidades médicas, psicologia, nutrição, entre outras.
                   </p>
                 </div>
 
@@ -159,21 +159,6 @@ const QuemSomos = () => {
                     className="w-full h-auto object-cover"
                   />
                 </div>
-                <Card className="p-8 bg-gradient-to-br from-brand-green/5 to-brand-accent/5 border-brand-green/20">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center">
-                        <Heart className="h-6 w-6 text-brand-green" />
-                      </div>
-                      <h3 className="text-xl font-bold text-foreground">Nosso Compromisso</h3>
-                    </div>
-                    
-                    <p className="text-muted-foreground leading-relaxed">
-                      Nosso compromisso é cuidar de cada paciente com <span className="text-brand-green font-medium">atenção</span>, <span className="text-brand-green font-medium">respeito</span> e <span className="text-brand-green font-medium">ética</span>, oferecendo um atendimento humanizado e acessível para a população que busca cuidar da saúde sem abrir mão da qualidade.
-                    </p>
-                  </div>
-                </Card>
-
                 <Card className="p-8 bg-gradient-to-br from-brand-accent/5 to-brand-green/5 border-brand-accent/20">
                   <div className="space-y-6">
                     <div className="flex items-center space-x-3">
@@ -188,6 +173,21 @@ const QuemSomos = () => {
                         "Na Clínica Viverse, acreditamos que saúde é um direito de todos. Por isso, trabalhamos todos os dias para que cada pessoa que nos procura se sinta acolhida, confiante e bem cuidada."
                       </p>
                     </blockquote>
+                  </div>
+                </Card>
+                
+                <Card className="p-8 bg-gradient-to-br from-brand-green/5 to-brand-accent/5 border-brand-green/20">
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center">
+                        <Heart className="h-6 w-6 text-brand-green" />
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground">Nosso Compromisso</h3>
+                    </div>
+                    
+                    <p className="text-muted-foreground leading-relaxed">
+                      Nosso compromisso é cuidar de cada paciente com <span className="text-brand-green font-medium">atenção</span>, <span className="text-brand-green font-medium">respeito</span> e <span className="text-brand-green font-medium">ética</span>, oferecendo um atendimento humanizado e acessível para a população que busca cuidar da saúde sem abrir mão da qualidade.
+                    </p>
                   </div>
                 </Card>
               </div>
