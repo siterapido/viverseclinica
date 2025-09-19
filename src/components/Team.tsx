@@ -118,26 +118,25 @@ const QuemSomos = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Coluna de texto principal */}
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center px-4 py-2 bg-brand-green/10 rounded-full">
-                    <span className="text-brand-green font-semibold text-sm">Nossa História</span>
-                  </div>
-                  
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
-                    A <span className="text-brand-green">Clínica Viverse</span> nasceu com o propósito de
-                    <span className="relative">
-                      tornar a saúde acessível
-                      <span className="absolute bottom-0 left-0 w-full h-1 bg-brand-accent/30 -z-10"></span>
-                    </span>
-                  </h2>
-                  
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    A Clínica Viverse nasceu com o propósito detornar a saúde acessível. Localizada em <span className="text-foreground font-medium">Nova Parnamirim</span>, somos uma clínica de especialidades médicas e multiprofissionais, oferecendo atendimento em áreas várias especialidades médicas, psicologia, nutrição, entre outras.
-                  </p>
+            {/* Seção superior: Nossa História com foto lado a lado */}
+             <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
+               {/* Coluna de texto Nossa História */}
+               <div className="lg:w-1/2 space-y-6 order-2 lg:order-1">
+                <div className="inline-flex items-center px-4 py-2 bg-brand-green/10 rounded-full">
+                  <span className="text-brand-green font-semibold text-sm">Nossa História</span>
                 </div>
+                
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+                  A <span className="text-brand-green">Clínica Viverse</span> nasceu com o propósito de
+                  <span className="relative">
+                    tornar a saúde acessível
+                    <span className="absolute bottom-0 left-0 w-full h-1 bg-brand-accent/30 -z-10"></span>
+                  </span>
+                </h2>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  A Clínica Viverse nasceu com o propósito de tornar a saúde acessível. Localizada em <span className="text-foreground font-medium">Nova Parnamirim</span>, somos uma clínica de especialidades médicas e multiprofissionais, oferecendo atendimento em várias especialidades médicas, psicologia, nutrição, entre outras.
+                </p>
 
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold text-foreground flex items-center">
@@ -150,47 +149,53 @@ const QuemSomos = () => {
                 </div>
               </div>
 
-              {/* Coluna de destaque - Imagem principal */}
-              <div className="space-y-6">
-                <div className="rounded-xl overflow-hidden shadow-lg border border-brand-green/20">
-                  <img 
-                    src="/Imagens/Equipe/foto prinicipal quem somos.jpeg" 
-                    alt="Equipe Clínica Viverse" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <Card className="p-8 bg-gradient-to-br from-brand-accent/5 to-brand-green/5 border-brand-accent/20">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-brand-accent/10 rounded-full flex items-center justify-center">
-                        <Users className="h-6 w-6 text-brand-accent" />
-                      </div>
-                      <h3 className="text-xl font-bold text-foreground">Nossa Filosofia</h3>
+              {/* Coluna da foto principal */}
+               <div className="lg:w-1/2 order-1 lg:order-2">
+                 <div className="rounded-xl overflow-hidden shadow-lg border border-brand-green/20 transform transition-transform duration-500 hover:scale-[1.02]">
+                   <img 
+                     src="/Imagens/Equipe/foto prinicipal quem somos.jpeg" 
+                     alt="Equipe Clínica Viverse" 
+                     className="w-full h-auto object-cover"
+                   />
+                 </div>
+               </div>
+            </div>
+            
+            {/* Seção inferior: Nossa Filosofia e Nosso Compromisso lado a lado */}
+             <div className="grid md:grid-cols-2 gap-8 mt-12">
+              {/* Nossa Filosofia */}
+               <Card className="p-8 bg-gradient-to-br from-brand-accent/5 to-brand-green/5 border-brand-accent/20 h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-brand-accent/10 rounded-full flex items-center justify-center">
+                      <Users className="h-6 w-6 text-brand-accent" />
                     </div>
-                    
-                    <blockquote className="border-l-4 border-brand-green pl-4 italic">
-                      <p className="text-lg text-foreground font-medium leading-relaxed">
-                        "Na Clínica Viverse, acreditamos que saúde é um direito de todos. Por isso, trabalhamos todos os dias para que cada pessoa que nos procura se sinta acolhida, confiante e bem cuidada."
-                      </p>
-                    </blockquote>
+                    <h3 className="text-xl font-bold text-foreground">Nossa Filosofia</h3>
                   </div>
-                </Card>
-                
-                <Card className="p-8 bg-gradient-to-br from-brand-green/5 to-brand-accent/5 border-brand-green/20">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center">
-                        <Heart className="h-6 w-6 text-brand-green" />
-                      </div>
-                      <h3 className="text-xl font-bold text-foreground">Nosso Compromisso</h3>
-                    </div>
-                    
-                    <p className="text-muted-foreground leading-relaxed">
-                      Nosso compromisso é cuidar de cada paciente com <span className="text-brand-green font-medium">atenção</span>, <span className="text-brand-green font-medium">respeito</span> e <span className="text-brand-green font-medium">ética</span>, oferecendo um atendimento humanizado e acessível para a população que busca cuidar da saúde sem abrir mão da qualidade.
+                  
+                  <blockquote className="border-l-4 border-brand-green pl-4 italic">
+                    <p className="text-lg text-foreground font-medium leading-relaxed">
+                      "Na Clínica Viverse, acreditamos que saúde é um direito de todos. Por isso, trabalhamos todos os dias para que cada pessoa que nos procura se sinta acolhida, confiante e bem cuidada."
                     </p>
+                  </blockquote>
+                </div>
+              </Card>
+              
+              {/* Nosso Compromisso */}
+               <Card className="p-8 bg-gradient-to-br from-brand-green/5 to-brand-accent/5 border-brand-green/20 h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center">
+                      <Heart className="h-6 w-6 text-brand-green" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground">Nosso Compromisso</h3>
                   </div>
-                </Card>
-              </div>
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    Nosso compromisso é cuidar de cada paciente com <span className="text-brand-green font-medium">atenção</span>, <span className="text-brand-green font-medium">respeito</span> e <span className="text-brand-green font-medium">ética</span>, oferecendo um atendimento humanizado e acessível para a população que busca cuidar da saúde sem abrir mão da qualidade.
+                  </p>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
