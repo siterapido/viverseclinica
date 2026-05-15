@@ -155,39 +155,50 @@ const About = () => {
               </div>
             </div>
 
-            {/* Right Content - Location */}
+            {/* Right Content - Clinic Photo and Location */}
             <div className="relative">
-              <div className="bg-secondary/30 rounded-2xl p-8 border border-border/50">
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-6">
-                    Nossa <span className="text-brand-green">Localização</span>
-                  </h3>
-                  
+              <div className="space-y-6">
+                {/* Clinic Photo */}
+                <div className="rounded-2xl overflow-hidden shadow-xl">
+                  <img
+                    src="/Imagens/fotoclinica.webp"
+                    alt="Clínica Viverse"
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+
+                <div className="bg-secondary/30 rounded-2xl p-8 border border-border/50">
                   <div className="space-y-6">
-                    <div className="bg-background/50 rounded-lg p-6">
-                      <h4 className="font-semibold text-foreground mb-3 flex items-center space-x-2">
-                        <MapPin className="h-5 w-5 text-brand-green" />
-                        <span>Endereço</span>
-                      </h4>
-                      <p className="text-muted-foreground">
-                        📍 Av. Abel Cabral, 2550 – Nova Parnamirim<br/>
-                        Parnamirim – RN, CEP 59151-250<br/>
-                        <strong>➡️ Dentro do Prédio Comercial AR Mall</strong>
-                      </p>
-                    </div>
-                    
-                    <div className="bg-background/50 rounded-lg p-6">
-                      <h4 className="font-semibold text-foreground mb-3">Agendamento</h4>
-                      <p className="text-muted-foreground mb-3">
-                        📲 Agende sua consulta agora mesmo pelo WhatsApp:
-                      </p>
-                      <Button
-                        variant="gradient"
-                        size="sm"
-                        onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse.', '_blank')}
-                      >
-                        👉 (84) 99448-2552
-                      </Button>
+                    <h3 className="text-2xl font-bold text-foreground mb-6">
+                      Nossa <span className="text-brand-green">Localização</span>
+                    </h3>
+
+                    <div className="space-y-6">
+                      <div className="bg-background/50 rounded-lg p-6">
+                        <h4 className="font-semibold text-foreground mb-3 flex items-center space-x-2">
+                          <MapPin className="h-5 w-5 text-brand-green" />
+                          <span>Endereço</span>
+                        </h4>
+                        <p className="text-muted-foreground">
+                          📍 Av. Abel Cabral, 2550 – Nova Parnamirim<br/>
+                          Parnamirim – RN, CEP 59151-250<br/>
+                          <strong>➡️ Dentro do Prédio Comercial AR Mall</strong>
+                        </p>
+                      </div>
+
+                      <div className="bg-background/50 rounded-lg p-6">
+                        <h4 className="font-semibold text-foreground mb-3">Agendamento</h4>
+                        <p className="text-muted-foreground mb-3">
+                          📲 Agende sua consulta agora mesmo pelo WhatsApp:
+                        </p>
+                        <Button
+                          variant="gradient"
+                          size="sm"
+                          onClick={() => window.open('https://wa.me/5584994482552?text=Olá! Gostaria de agendar uma consulta na Clínica Viverse.', '_blank')}
+                        >
+                          👉 (84) 99448-2552
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
